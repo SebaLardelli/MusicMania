@@ -1,4 +1,5 @@
 # MusicMania - Juego de Adivinar Canciones
+Inspirado en stream como OLGA y demas..
 
 ## Descripcion breve
 MusicMania es un juego web inspirado en la estetica 8-bit y retro.  
@@ -41,5 +42,5 @@ Actualmente se completo la recopilacion de recursos:
 - Agregar pagina de contacto con validaciones en JavaScript.
 
 ## Repositorio
-Link de GitHub del proyecto (abrir en nueva pestana):  
-[Agregar URL del repositorio](https://github.com/tu-usuario/tu-repo)
+Link de GitHub del proyecto:  
+https://github.com/SebaLardelli/MusicMania
