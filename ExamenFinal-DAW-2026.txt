@@ -1,0 +1,198 @@
+Examen Final – Desarrollo Y Arquitectura Web 2026  
+Examen Final - Desarrollo y Arquitecturas Web 2026 
+Desarrollo de Juego Web 
+ 
+El proyecto final consistirá en el desarrollo de un videojuego web a elección del alumno 
+o grupo de dos (2) alumnos, utilizando tecnologías frontend vistas durante la cursada. 
+ 
+El objetivo principal es aplicar conceptos de HTML5, CSS3 y JavaScript (ES5) para 
+construir una aplicación web interactiva, funcional y responsive. 
+ 
+Cada grupo podrá elegir libremente el tipo de juego a desarrollar, siempre que cumpla 
+con los requerimientos obligatorios establecidos en este documento. 
+ 
+Ejemplos posibles de juegos: 
+- Buscaminas 
+- Snake 
+- Tetris 
+- Ta-Te-Ti 
+- Memotest 
+- Arkanoid 
+- Ahorcado 
+- Sudoku 
+- Plataformas 2D 
+- Juego de cartas 
+- Trivia/Preguntas y respuestas 
+- RPG simple 
+- Endless Runner 
+- Juego de carreras 
+- Tower Defense 
+- Puzzle Game 
+- Shooter 2D 
+- Match-3 
+- Otros juegos aprobados previamente por la cátedra 
+ 
+Objetivo del Proyecto 
+• Ser completamente funcional. 
+• Poder ejecutarse directamente desde el navegador. 
+• Tener una interfaz responsive. 
+• Aplicar correctamente conceptos de arquitectura frontend, manipulación del DOM y 
+lógica de programación en JavaScript. 
+• Mantener buenas prácticas de código y organización del proyecto. 
+
+Examen Final – Desarrollo Y Arquitectura Web 2026  
+Requerimientos Obligatorios 
+• Código prolijo y estricto (HTML5, CSS3 y ES5). 
+• Consistencia en comentarios, commits y estilos de código. 
+• Responsividad y estética del juego y la web (usando Flexbox). 
+• No deberá tener código bloqueante (uso de alert). Utilizar modales en lugar de alert. 
+• El juego deberá ser completamente funcional para un jugador. 
+• Al iniciar la partida deberá solicitarse el nombre del jugador, validando como mínimo 
+3 letras. 
+• El juego deberá iniciarse sin necesidad de recargar la página. 
+• Mostrar mensajes visuales al ganar o perder. 
+• Incluir opción para reiniciar la partida sin recargar el sitio. 
+• Validación de inputs y manejo de errores. 
+• El juego deberá poseer una interfaz gráfica clara y entendible. 
+• La lógica principal del juego deberá desarrollarse en JavaScript. 
+• El juego debe tener una condición clara de victoria y derrota. 
+• El juego debe incluir algún sistema de puntaje, tiempo, vidas o progreso. 
+• El estado visual del juego debe actualizarse dinámicamente mediante manipulación 
+del DOM. 
+• Debe existir interacción mediante teclado, mouse o ambos. 
+• El juego debe contar con una pantalla principal o menú inicial. 
+• El juego no podrá depender de librerías externas para su lógica principal. 
+Requisitos Técnicos del Juego 
+• Generación dinámica de elementos mediante JavaScript. 
+• Manejo de eventos del DOM. 
+• Actualización dinámica de puntajes, vidas, tiempo, movimientos o estados. 
+• Detección de condiciones de victoria y derrota. 
+• Reinicio dinámico del juego. 
+• Manejo de colisiones, validaciones o reglas según corresponda. 
+• Uso correcto de estructuras de datos y funciones. 
+• Separación lógica entre interfaz y mecánicas del juego. 
+• Persistencia mínima de datos usando LocalStorage (puntajes, partidas o 
+configuración). 
+Página de Contacto 
+• El proyecto deberá incluir una página de Contacto. 
+• Formulario con nombre, mail y mensaje. 
+• Al enviar el formulario deberá abrirse la herramienta de envío de emails 
+predeterminada del sistema operativo. 
+ 
+ 
+
+Examen Final – Desarrollo Y Arquitectura Web 2026  
+Validaciones del Formulario 
+• Las validaciones deberán realizarse exclusivamente con JavaScript. 
+• Nombre alfanumérico. 
+• Mail válido. 
+• Mensaje con más de 5 caracteres. 
+Github 
+• El proyecto deberá estar alojado en Github. 
+• Contar con un README claro y correctamente formateado. 
+• Tener un link visible hacia el repositorio de Github. 
+• El link deberá abrirse en una nueva pestaña. 
+Requerimientos Deseados 
+• Accesibilidad: modo oscuro y modo claro. 
+• Agregar sonidos o música. 
+• Pantalla de pausa. 
+• Sistema de niveles o dificultad. 
+• Guardado de partidas usando LocalStorage. 
+• Ranking de jugadores. 
+• Historial de partidas. 
+• Configuración personalizada del juego. 
+• Sistema de vidas o checkpoints. 
+• Animaciones avanzadas. 
+• Compatibilidad mobile mejorada. 
+• Efectos visuales y transiciones. 
+• Soporte para teclado y gamepad. 
+• Pantallas de instrucciones o tutorial. 
+• Pantalla de Game Over personalizada. 
+• Sistema de logros. 
+• Multiplayer local. 
+• Responsive avanzado para tablet y mobile. 
+Evaluación 
+• Los requerimientos obligatorios representan las condiciones mínimas para aprobar 
+el proyecto (Nota 4). 
+• Los requerimientos deseados serán considerados para aumentar la calificación final. 
+• Un proyecto completo, correctamente implementado y con excelente calidad técnica 
+podrá alcanzar la nota máxima (10). 
+Tipo de nomenclaturas 
+• Pascal Case: SomeName 
+• Camel Case: someName 
+• Snake Case: some_name 
+
+Examen Final – Desarrollo Y Arquitectura Web 2026  
+• Kebab Case: some-name 
+Git/Github 
+• Los commits deben contar el paso a paso realizado. 
+• Debe entenderse cómo se construyó el proyecto leyendo el historial. 
+• No existe una cantidad correcta de commits, pero deben reflejar evolución real. 
+• Evitar comentarios genéricos como Fix, Changes, Update o Progress. 
+• Los commits deben ser cortos, claros y descriptivos. 
+Archivos y carpetas 
+• El repositorio debe tener un README claro. 
+• Separar correctamente imágenes, css y js. 
+• Mantener consistencia en nombres de archivos y carpetas. 
+• Utilizar .gitignore. 
+HTML 
+• Definir siempre Doctype, viewport, title y charset. 
+• Utilizar reset.css. 
+• No usar <br> para maquetar. 
+• No usar estilos inline. 
+• No usar JavaScript inline. 
+• Mantener consistencia en ids y clases. 
+• Mantener indentación perfecta. 
+• No dejar líneas vacías innecesarias. 
+• No dejar comentarios innecesarios. 
+CSS 
+• Utilizar siempre Flexbox. 
+• No utilizar Grid ni Float. 
+• Mantener consistencia en colores. 
+• Utilizar unidades coherentes. 
+• Ordenar correctamente selectores y propiedades. 
+• Los media queries deben ir al final. 
+• Mantener indentación perfecta. 
+• No dejar comentarios innecesarios. 
+JavaScript 
+• Utilizar "use strict"; 
+• No usar sintaxis ES6: let, const o =>. 
+• Mantener consistencia en comillas y punto y coma. 
+• Usar siempre === y !==. 
+• Declarar variables al inicio. 
+• Manejar eventos con addEventListener. 
+
+Examen Final – Desarrollo Y Arquitectura Web 2026  
+• Separar lógica en múltiples archivos JS. 
+• Evitar HTML inyectado dinámicamente cuando sea posible. 
+• Mantener indentación perfecta. 
+• No dejar comentarios innecesarios. 
+ 
+Uso de IA 
+Se permite el uso de herramientas de IA durante el desarrollo del proyecto. El uso de IA  
+debe entenderse como una herramienta de asistencia y apoyo al aprendizaje, y no 
+como reemplazo del trabajo realizado por el alumno. Los alumnos deben poder 
+comprender y explicar todo el código entregado, incluso aquel generado o asistido 
+mediante herramientas de IA. 
+En caso de utilizar herramientas de IA, deberá aclararse explícitamente: 
+• Herramienta utilizada (por ejemplo: ChatGPT, Claude, Gemini, Copilot, etc). 
+• Modelo utilizado (por ejemplo: GPT-5, GPT-4º, Claude Sonnet, Gemini Pro, etc). 
+Además del proyecto, deberá entregarse un documento adicional denominado ‘Prompts 
+IA’. Este documento deberá incluir: 
+• Los prompts más relevantes utilizados durante el desarrollo. 
+• Las respuestas o fragmentos importantes generados. 
+• Una breve explicación del uso dado a cada prompt. 
+La ausencia de este documento en caso de haberse utilizado IA podrá impactar 
+negativamente en la evaluación del proyecto. 
+El uso de IA no exime al alumno de cumplir con los requerimientos técnicos, buenas 
+prácticas, arquitectura, funcionamiento y comprensión integral del proyecto. 
+Durante la defensa oral o presentación del proyecto, los alumnos podrán ser 
+consultados sobre cualquier parte del código implementado. 
+ 
+General 
+• No mezclar inglés y español. 
+• Mantener consistencia en todo el proyecto. 
+• El proyecto debe funcionar correctamente en navegador moderno. 
+• Se evaluará funcionamiento, calidad visual, arquitectura del código, experiencia de 
+usuario, organización del repositorio y buenas prácticas. 
+ 
