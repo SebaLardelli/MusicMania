@@ -243,7 +243,7 @@ MusicMania/
       inicio-*/
       instrucciones-ui/
     manifests/
-      inicio-scripts.js         # referencia de orden (no loader)
+      inicio-scripts.js         # referencia de orden
       juego-scripts.js
   assets/
     imagenes/
@@ -277,19 +277,6 @@ MusicMania/
 Los archivos MP3 deben servirse por HTTP. Abrir con `file://` puede fallar al cargar audio.
 
 **Opcion recomendada:** abrir la demo publicada en [https://sebalardelli.github.io/MusicMania/](https://sebalardelli.github.io/MusicMania/)
-
-**Con XAMPP en local:**
-
-1. Copiar el proyecto a la carpeta de XAMPP (ej. `C:\xampp\htdocs\MusicMania\`).
-2. Iniciar Apache en XAMPP.
-3. Abrir en el navegador: `http://localhost/MusicMania/`
-
----
-
-## Proximos pasos
-
-- Revisar responsive en mobile y tablet.
-- Actualizar `js/datos/datos-contacto.js` con el mail real de destino.
 
 ---
 
