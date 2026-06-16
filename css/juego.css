@@ -435,6 +435,18 @@ body.pagina-juego {
     animation: revelar-imagen 0.45s ease;
 }
 
+.modal-imagen-contenedor--fin-del-juego {
+    background: #12082a;
+    border-color: #ff6b6b;
+    box-shadow: 0 6px 24px rgba(255, 45, 106, 0.45);
+}
+
+.modal-imagen-contenedor--fin-del-juego .modal-imagen-nivel {
+    max-width: 18rem;
+    max-height: none;
+    image-rendering: auto;
+}
+
 @keyframes revelar-imagen {
     0% {
         transform: scale(0.88);

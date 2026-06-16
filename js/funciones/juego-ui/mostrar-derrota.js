@@ -5,5 +5,5 @@ JuegoUi.mostrarDerrota = function (nivel, puntajeTotal, resultadoRecord) {
     cuerpo = cuerpo + JuegoUi.formatearMensajeNuevoRecord(resultadoRecord);
     JuegoUi.abrirModal("Fin del juego", cuerpo, "Reintentar", function () {
         JuegoLogica.reiniciarPartidaCompleta();
-    }, null);
+    }, null, "assets/juego/fin-del-juego.png");
 };
