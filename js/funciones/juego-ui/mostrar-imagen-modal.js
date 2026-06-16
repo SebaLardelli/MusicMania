@@ -1,10 +1,12 @@
 "use strict";
 
 JuegoUi.mostrarImagenModal = function (nivel) {
+    var rutaCodificada = "";
     if (!nivel || !JuegoUiEstado.modalImagenContenedor || !JuegoUiEstado.modalImagenNivel) {
         return;
     }
-    JuegoUiEstado.modalImagenNivel.src = UtilidadesTexto.codificarRutaArchivo(nivel.rutaImagen);
+    rutaCodificada = UtilidadesTexto.codificarRutaArchivo(nivel.rutaImagen);
+    JuegoUiEstado.modalImagenNivel.src = rutaCodificada + "?v=2";
     JuegoUiEstado.modalImagenNivel.alt = "Calcomania de " + nivel.banda;
     JuegoUiEstado.modalImagenContenedor.classList.remove("oculta");
 };
