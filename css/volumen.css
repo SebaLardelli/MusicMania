@@ -1,0 +1,66 @@
+.controles-audio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.55rem;
+    width: 100%;
+    max-width: 22rem;
+    padding: 0.75rem 1rem;
+    background: rgba(55, 28, 100, 0.55);
+    border: 2px solid var(--color-acento, #00f5d4);
+}
+
+.etiqueta-volumen {
+    font-size: 0.42rem;
+    color: #ffe66d;
+    letter-spacing: 0.08em;
+}
+
+.fila-volumen {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+.icono-volumen {
+    font-size: 0.75rem;
+    line-height: 1;
+}
+
+.control-volumen {
+    flex: 1;
+    min-width: 8rem;
+    max-width: 14rem;
+    height: 0.45rem;
+    accent-color: var(--color-acento, #00f5d4);
+    cursor: pointer;
+}
+
+.texto-volumen {
+    font-size: 0.42rem;
+    color: var(--color-acento, #00f5d4);
+    min-width: 2.5rem;
+    text-align: center;
+}
+
+.boton-mute {
+    font-size: 0.42rem;
+    padding: 0.4rem 0.65rem;
+    color: var(--color-texto, #fff8ff);
+    background: rgba(70, 35, 120, 0.75);
+    border: 2px solid var(--color-acento, #00f5d4);
+    border-radius: 2px;
+}
+
+.boton-mute:hover,
+.boton-mute:focus-visible {
+    background: rgba(0, 245, 212, 0.25);
+}
+
+.controles-audio--juego {
+    max-width: 32rem;
+    margin-top: 0.25rem;
+}

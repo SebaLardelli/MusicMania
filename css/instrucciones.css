@@ -1,0 +1,105 @@
+.boton-instrucciones {
+    font-size: 0.45rem;
+    padding: 0.55rem 0.85rem;
+    color: #1a0a35;
+    background: #ffe66d;
+    border: 3px solid var(--color-borde-calco, #4a2d8a);
+    box-shadow: 4px 4px 0 var(--color-borde-calco, #4a2d8a);
+}
+
+.boton-instrucciones:hover,
+.boton-instrucciones:focus-visible {
+    background: var(--color-acento, #00f5d4);
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-borde-calco, #4a2d8a);
+}
+
+.modal-contenido--instrucciones {
+    max-width: 34rem;
+    text-align: left;
+    align-items: stretch;
+}
+
+.modal-contenido--instrucciones .modal-titulo {
+    text-align: center;
+}
+
+.lista-instrucciones {
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.item-instruccion {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.6rem;
+    font-size: clamp(0.4rem, 1.9vw, 0.48rem);
+    line-height: 1.85;
+    color: var(--color-texto, #fff8ff);
+    padding: 0.6rem 0.7rem;
+    background: rgba(55, 28, 100, 0.55);
+    border-left: 4px solid var(--color-acento, #00f5d4);
+}
+
+.emoticon-instruccion {
+    flex-shrink: 0;
+    font-size: clamp(0.85rem, 3.5vw, 1.1rem);
+    line-height: 1.4;
+}
+
+.texto-item-instruccion {
+    flex: 1;
+}
+
+.texto-item-instruccion strong {
+    color: #ffe66d;
+}
+
+.item-instruccion--destacado {
+    border-left-color: #ffe66d;
+    background: rgba(90, 45, 30, 0.45);
+}
+
+.item-instruccion--destacado .texto-item-instruccion {
+    color: #fff8ff;
+}
+
+.texto-instrucciones-tiempo {
+    font-size: clamp(0.4rem, 1.9vw, 0.48rem);
+    line-height: 1.85;
+    color: #ffe66d;
+    text-align: center;
+    padding: 0.65rem 0.75rem;
+    background: rgba(55, 28, 100, 0.65);
+    border: 2px dashed var(--color-acento, #00f5d4);
+}
+
+.acciones-instrucciones {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.cabecera-acciones-juego {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.6rem;
+    width: 100%;
+    max-width: 32rem;
+}
+
+@media (max-width: 480px) {
+    .cabecera-acciones-juego {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .emoticon-instruccion {
+        font-size: 1rem;
+    }
+}

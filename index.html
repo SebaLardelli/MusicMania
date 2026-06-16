@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicMania - Inicio</title>
+    <link rel="icon" type="image/png" href="assets/inicio/icono/icono.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/inicio.css">
+    <link rel="stylesheet" href="css/instrucciones.css">
+    <link rel="stylesheet" href="css/volumen.css">
+</head>
+<body class="pagina-inicio">
+    <div class="contenedor-video-fondo" aria-hidden="true">
+        <video
+            id="video-fondo"
+            class="video-fondo"
+            src="assets/inicio/video/videoplayback.mp4"
+            muted
+            loop
+            playsinline
+            preload="auto">
+        </video>
+    </div>
+    <div class="capa-overlay" aria-hidden="true"></div>
+    <audio
+        id="audio-fondo"
+        src="assets/inicio/audio/death-by-glamour.mp3"
+        loop
+        preload="auto">
+    </audio>
+    <section id="pantalla-arranque" class="pantalla-arranque">
+        <p class="texto-arranque">Presiona para iniciar musica y video en sincronia</p>
+        <button type="button" id="boton-arranque" class="boton-arranque">Jugar</button>
+    </section>
+    <main class="contenido-inicio">
+        <header class="cabecera-inicio">
+            <h1 class="titulo-juego">MusicMania</h1>
+            <p class="subtitulo-juego">Ingresa tu nombre, elegi una categoria y adivina la cancion 8-bit.</p>
+            <button type="button" id="boton-instrucciones" class="boton-instrucciones">📖 Instrucciones</button>
+        </header>
+        <section class="panel-jugador" aria-labelledby="etiqueta-jugador">
+            <h2 id="etiqueta-jugador" class="etiqueta-seccion">Jugador</h2>
+            <div class="formulario-jugador">
+                <label class="etiqueta-campo" for="input-nombre-jugador">Nombre del jugador</label>
+                <input
+                    type="text"
+                    id="input-nombre-jugador"
+                    class="campo-texto"
+                    maxlength="24"
+                    autocomplete="name"
+                    placeholder="Minimo 3 letras">
+                <p id="error-nombre-jugador" class="texto-error" role="alert"></p>
+            </div>
+        </section>
+        <section class="panel-categorias" aria-labelledby="etiqueta-categorias">
+            <h2 id="etiqueta-categorias" class="etiqueta-seccion">Categorías</h2>
+            <div id="lista-categorias" class="lista-categorias" role="group" aria-label="Seleccion de categoria"></div>
+        </section>
+        <section class="panel-records" aria-labelledby="etiqueta-records">
+            <h2 id="etiqueta-records" class="etiqueta-seccion">Mejores marcas por genero</h2>
+            <div class="contenedor-tabla-records">
+                <table class="tabla-records">
+                    <thead>
+                        <tr>
+                            <th scope="col">Genero</th>
+                            <th scope="col">Jugador</th>
+                            <th scope="col">Nivel</th>
+                            <th scope="col">Puntos</th>
+                            <th scope="col">Tiempo</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cuerpo-tabla-records"></tbody>
+                </table>
+            </div>
+        </section>
+        <footer class="pie-inicio">
+            <div class="controles-audio">
+                <label class="etiqueta-volumen" for="control-volumen">Volumen de musica</label>
+                <div class="fila-volumen">
+                    <span class="icono-volumen" aria-hidden="true">🔊</span>
+                    <input
+                        type="range"
+                        id="control-volumen"
+                        class="control-volumen"
+                        min="0"
+                        max="100"
+                        value="70"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="70">
+                    <span id="texto-volumen" class="texto-volumen">70%</span>
+                </div>
+                <button type="button" id="boton-mute" class="boton-mute">Silenciar musica</button>
+            </div>
+            <p class="texto-pie">Proyecto DAW 2026 - Juego de adivinar canciones</p>
+            <a class="enlace-github" href="contacto.html">Contacto</a>
+            <a
+                class="enlace-github"
+                href="https://github.com/SebaLardelli/MusicMania"
+                target="_blank"
+                rel="noopener noreferrer">
+                Ver repositorio en GitHub
+            </a>
+        </footer>
+    </main>
+    <div id="modal-instrucciones" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="titulo-instrucciones">
+        <div class="modal-contenido modal-contenido--instrucciones">
+            <h2 id="titulo-instrucciones" class="modal-titulo">📖 Como jugar</h2>
+            <ul class="lista-instrucciones">
+                <li class="item-instruccion item-instruccion--destacado">
+                    <span class="emoticon-instruccion" aria-hidden="true">🎵</span>
+                    <span class="texto-item-instruccion">En musica vale adivinar el <strong>nombre de la cancion</strong> o el <strong>nombre de la banda</strong>.</span>
+                </li>
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">👤</span>
+                    <span class="texto-item-instruccion">Escribi tu nombre en el menu (minimo 3 letras) y elegi una categoria para empezar.</span>
+                </li>
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">🎧</span>
+                    <span class="texto-item-instruccion">Escucha la cancion 8-bit. Cuando la reconozcas, detenela.</span>
+                </li>
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">⏸️</span>
+                    <span class="texto-item-instruccion">Para detener: barra <strong>Espaciadora</strong>, tecla <strong>Enter</strong> o boton <strong>Detener musica</strong>.</span>
+                </li>
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">⌨️</span>
+                    <span class="texto-item-instruccion">Escribi tu respuesta y confirma con <strong>Enter</strong> o el boton <strong>Confirmar respuesta</strong>.</span>
+                </li>
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">⚡</span>
+                    <span class="texto-item-instruccion">Mientras suena la musica el tiempo sube: adivina mas rapido para sumar mas puntos.</span>
+                </li>
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">❤️</span>
+                    <span class="texto-item-instruccion">Tenés <strong>1 vida</strong>. Si fallas o se acaba el tiempo al responder, aparece <strong>Fin del juego</strong> 💀.</span>
+                </li>
+            </ul>
+            <div class="acciones-instrucciones">
+                <button type="button" id="modal-instrucciones-cerrar" class="modal-boton">✅ Entendido</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/datos/datos-categorias.js"></script>
+    <script src="js/namespaces/utilidades-texto.js"></script>
+    <script src="js/namespaces/almacenamiento-jugador.js"></script>
+    <script src="js/namespaces/almacenamiento-records.js"></script>
+    <script src="js/namespaces/almacenamiento-volumen.js"></script>
+    <script src="js/namespaces/control-volumen.js"></script>
+    <script src="js/namespaces/inicio-categorias.js"></script>
+    <script src="js/namespaces/inicio-media.js"></script>
+    <script src="js/namespaces/inicio-jugador.js"></script>
+    <script src="js/namespaces/inicio-records.js"></script>
+    <script src="js/namespaces/instrucciones-ui.js"></script>
+    <script src="js/estado/inicio-categorias-estado.js"></script>
+    <script src="js/estado/inicio-media-estado.js"></script>
+    <script src="js/estado/inicio-jugador-estado.js"></script>
+    <script src="js/estado/inicio-records-estado.js"></script>
+    <script src="js/estado/control-volumen-estado.js"></script>
+    <script src="js/funciones/utilidades-texto/reemplazar-acentos.js"></script>
+    <script src="js/funciones/utilidades-texto/normalizar-texto.js"></script>
+    <script src="js/funciones/utilidades-texto/respuesta-es-correcta.js"></script>
+    <script src="js/funciones/utilidades-texto/nombre-jugador-es-valido.js"></script>
+    <script src="js/funciones/utilidades-texto/codificar-ruta-archivo.js"></script>
+    <script src="js/funciones/almacenamiento-jugador/obtener-nombre.js"></script>
+    <script src="js/funciones/almacenamiento-jugador/guardar-nombre.js"></script>
+    <script src="js/funciones/almacenamiento-records/obtener-records-completos.js"></script>
+    <script src="js/funciones/almacenamiento-records/guardar-records-completos.js"></script>
+    <script src="js/funciones/almacenamiento-records/obtener-record-categoria.js"></script>
+    <script src="js/funciones/almacenamiento-records/actualizar-record-si-mejora.js"></script>
+    <script src="js/funciones/almacenamiento-volumen/volumen-por-defecto.js"></script>
+    <script src="js/funciones/almacenamiento-volumen/normalizar.js"></script>
+    <script src="js/funciones/almacenamiento-volumen/obtener-volumen.js"></script>
+    <script src="js/funciones/almacenamiento-volumen/guardar-volumen.js"></script>
+    <script src="js/funciones/control-volumen/actualizar-texto-volumen.js"></script>
+    <script src="js/funciones/control-volumen/actualizar-boton-mute.js"></script>
+    <script src="js/funciones/control-volumen/aplicar-volumen-audio.js"></script>
+    <script src="js/funciones/control-volumen/sincronizar-slider.js"></script>
+    <script src="js/funciones/control-volumen/guardar-y-notificar.js"></script>
+    <script src="js/funciones/control-volumen/alternar-mute.js"></script>
+    <script src="js/funciones/control-volumen/obtener-volumen-actual.js"></script>
+    <script src="js/funciones/control-volumen/init.js"></script>
+    <script src="js/funciones/inicio-media/obtener-elementos.js"></script>
+    <script src="js/funciones/inicio-media/reiniciar-tiempos.js"></script>
+    <script src="js/funciones/inicio-media/mostrar-pantalla-arranque.js"></script>
+    <script src="js/funciones/inicio-media/ocultar-pantalla-arranque.js"></script>
+    <script src="js/funciones/inicio-media/reproducir-ambos.js"></script>
+    <script src="js/funciones/inicio-media/sincronizar-y-reproducir.js"></script>
+    <script src="js/funciones/inicio-media/marcar-listo.js"></script>
+    <script src="js/funciones/inicio-media/iniciar-con-interaccion.js"></script>
+    <script src="js/funciones/inicio-media/configurar-bucle.js"></script>
+    <script src="js/funciones/inicio-media/enlazar-eventos.js"></script>
+    <script src="js/funciones/inicio-media/init.js"></script>
+    <script src="js/funciones/inicio-jugador/restaurar-nombre.js"></script>
+    <script src="js/funciones/inicio-jugador/validar-nombre-actual.js"></script>
+    <script src="js/funciones/inicio-jugador/guardar-nombre-actual.js"></script>
+    <script src="js/funciones/inicio-jugador/guardar-si-es-valido.js"></script>
+    <script src="js/funciones/inicio-jugador/mostrar-error.js"></script>
+    <script src="js/funciones/inicio-jugador/limpiar-error.js"></script>
+    <script src="js/funciones/inicio-jugador/enlazar-eventos.js"></script>
+    <script src="js/funciones/inicio-jugador/init.js"></script>
+    <script src="js/funciones/inicio-categorias/obtener-dato-por-id.js"></script>
+    <script src="js/funciones/inicio-categorias/crear-boton-categoria.js"></script>
+    <script src="js/funciones/inicio-categorias/renderizar-botones.js"></script>
+    <script src="js/funciones/inicio-categorias/quitar-activo-todos.js"></script>
+    <script src="js/funciones/inicio-categorias/guardar-categoria.js"></script>
+    <script src="js/funciones/inicio-categorias/ir-a-pagina-categoria.js"></script>
+    <script src="js/funciones/inicio-categorias/restaurar-seleccion.js"></script>
+    <script src="js/funciones/inicio-categorias/obtener-categoria-activa.js"></script>
+    <script src="js/funciones/inicio-categorias/init.js"></script>
+    <script src="js/funciones/inicio-records/crear-celda.js"></script>
+    <script src="js/funciones/inicio-records/renderizar-tabla.js"></script>
+    <script src="js/funciones/inicio-records/init.js"></script>
+    <script src="js/funciones/instrucciones-ui/actualizar-texto-dinamico.js"></script>
+    <script src="js/funciones/instrucciones-ui/init.js"></script>
+    <script src="js/inicio-main.js"></script>
+</body>
+</html>

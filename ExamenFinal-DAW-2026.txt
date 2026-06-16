@@ -195,4 +195,3 @@ General
 • El proyecto debe funcionar correctamente en navegador moderno. 
 • Se evaluará funcionamiento, calidad visual, arquitectura del código, experiencia de 
 usuario, organización del repositorio y buenas prácticas. 
- 

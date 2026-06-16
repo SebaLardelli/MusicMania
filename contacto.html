@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicMania - Contacto</title>
+    <link rel="icon" type="image/png" href="assets/inicio/icono/icono.png">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body class="pagina-contacto">
+    <main class="contenido-contacto">
+        <header class="cabecera-contacto">
+            <h1 class="titulo-contacto">Contacto</h1>
+            <p class="subtitulo-contacto">Completa el formulario y envialo. Se abrira la aplicacion de correo de tu sistema operativo.</p>
+            <p id="aviso-protocolo-local" class="aviso-protocolo oculta" role="alert">
+                Abri esta pagina desde <strong>http://localhost/MusicMania/contacto.html</strong> (XAMPP). Con archivo local el correo no funciona.
+            </p>
+        </header>
+        <section class="panel-contacto" aria-labelledby="etiqueta-formulario-contacto">
+            <h2 id="etiqueta-formulario-contacto" class="etiqueta-campo">Formulario de contacto</h2>
+            <form id="formulario-contacto" class="formulario-contacto" novalidate>
+                <label class="etiqueta-campo" for="input-contacto-nombre">Nombre</label>
+                <input
+                    type="text"
+                    id="input-contacto-nombre"
+                    name="nombre"
+                    class="campo-texto"
+                    maxlength="40"
+                    autocomplete="name">
+                <p id="error-contacto-nombre" class="texto-error" role="alert"></p>
+                <label class="etiqueta-campo" for="input-contacto-mail">Mail</label>
+                <input
+                    type="text"
+                    id="input-contacto-mail"
+                    name="mail"
+                    class="campo-texto"
+                    maxlength="80"
+                    autocomplete="email">
+                <p id="error-contacto-mail" class="texto-error" role="alert"></p>
+                <label class="etiqueta-campo" for="input-contacto-mensaje">Mensaje</label>
+                <textarea
+                    id="input-contacto-mensaje"
+                    name="mensaje"
+                    class="campo-area"
+                    maxlength="500"
+                    rows="5"></textarea>
+                <p id="error-contacto-mensaje" class="texto-error" role="alert"></p>
+                <button type="submit" class="boton-enviar">Enviar mensaje</button>
+            </form>
+            <div id="panel-exito-envio" class="panel-exito oculta" role="status" aria-live="polite">
+                <p class="texto-exito">Mensaje validado correctamente.</p>
+                <p class="texto-exito texto-exito--ayuda">Elegi como enviarlo:</p>
+                <a id="enlace-enviar-correo" class="boton-enviar boton-enviar--enlace" href="#">Abrir correo del sistema</a>
+                <a
+                    id="enlace-gmail"
+                    class="boton-enviar boton-enviar--enlace boton-enviar--secundario"
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    Abrir en Gmail
+                </a>
+            </div>
+        </section>
+        <footer class="pie-contacto">
+            <a class="enlace-volver" href="index.html">Volver al menu</a>
+            <p class="texto-pie">Proyecto DAW 2026 - Juego de adivinar canciones</p>
+            <a
+                class="enlace-github"
+                href="https://github.com/SebaLardelli/MusicMania"
+                target="_blank"
+                rel="noopener noreferrer">
+                Ver repositorio en GitHub
+            </a>
+        </footer>
+    </main>
+    <script src="js/datos/datos-contacto.js"></script>
+    <script src="js/namespaces/utilidades-texto.js"></script>
+    <script src="js/namespaces/contacto-formulario.js"></script>
+    <script src="js/estado/contacto-formulario-estado.js"></script>
+    <script src="js/funciones/utilidades-texto/nombre-es-alfanumerico.js"></script>
+    <script src="js/funciones/utilidades-texto/mail-es-valido.js"></script>
+    <script src="js/funciones/contacto-formulario/limpiar-errores.js"></script>
+    <script src="js/funciones/contacto-formulario/validar-formulario.js"></script>
+    <script src="js/funciones/contacto-formulario/mostrar-errores.js"></script>
+    <script src="js/funciones/contacto-formulario/construir-enlace-mailto.js"></script>
+    <script src="js/funciones/contacto-formulario/construir-enlace-gmail.js"></script>
+    <script src="js/funciones/contacto-formulario/abrir-enlace-mailto.js"></script>
+    <script src="js/funciones/contacto-formulario/advertir-si-archivo-local.js"></script>
+    <script src="js/funciones/contacto-formulario/mostrar-exito-envio.js"></script>
+    <script src="js/funciones/contacto-formulario/enviar-correo.js"></script>
+    <script src="js/funciones/contacto-formulario/enlazar-eventos.js"></script>
+    <script src="js/funciones/contacto-formulario/init.js"></script>
+    <script src="js/contacto-main.js"></script>
+</body>
+</html>

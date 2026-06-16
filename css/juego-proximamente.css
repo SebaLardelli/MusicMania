@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+:root {
+    --color-fondo: #0d0221;
+    --color-texto: #f8f4ff;
+    --color-acento: #00f5d4;
+    --color-borde: #1a1030;
+    --fuente-pixel: "Press Start 2P", monospace;
+}
+
+body.pagina-proximamente {
+    font-family: var(--fuente-pixel);
+    color: var(--color-texto);
+    background: var(--color-fondo);
+    min-height: 100vh;
+}
+
+.contenedor-proximamente {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    gap: 1.25rem;
+    text-align: center;
+}
+
+.titulo-genero {
+    font-size: clamp(0.8rem, 3.5vw, 1.1rem);
+    text-shadow: 4px 4px 0 var(--color-borde);
+}
+
+.texto-proximamente {
+    font-size: clamp(0.45rem, 2vw, 0.55rem);
+    line-height: 1.8;
+    max-width: 26rem;
+    color: var(--color-acento);
+}
+
+.boton-volver {
+    display: inline-block;
+    font-size: 0.5rem;
+    padding: 0.7rem 1rem;
+    color: #0d0221;
+    background: var(--color-acento);
+    border: 4px solid var(--color-borde);
+    box-shadow: 5px 5px 0 var(--color-borde);
+    text-decoration: none;
+}
+
+.boton-volver:hover,
+.boton-volver:focus-visible {
+    background: #ffe66d;
+}
+
+.pagina-proximamente--electronica .titulo-genero {
+    color: #ff6bcb;
+}
+
+.pagina-proximamente--juegos .titulo-genero {
+    color: #b388ff;
+}
+
+.pagina-proximamente--metal .titulo-genero {
+    color: #8a8a8a;
+}
+
+.pagina-proximamente--pelis-series .titulo-genero {
+    color: #ff9f1c;
+}
+
+.pagina-proximamente--pop .titulo-genero {
+    color: #00bbf9;
+}

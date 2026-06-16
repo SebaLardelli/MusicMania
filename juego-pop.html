@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MusicMania - Pop</title>
+
+    <link rel="icon" type="image/png" href="assets/imagenes/icono.png">
+
+    <link rel="stylesheet" href="css/reset.css">
+
+    <link rel="stylesheet" href="css/juego.css">
+
+    <link rel="stylesheet" href="css/instrucciones.css">
+
+    <link rel="stylesheet" href="css/volumen.css">
+
+</head>
+
+<body class="pagina-juego">
+
+    <div class="fondo-juego" aria-hidden="true"></div>
+
+    <div class="contenedor-juego">
+
+        <header class="cabecera-juego">
+
+            <p class="etiqueta-marca">MusicMania</p>
+
+            <h1 class="titulo-categoria">Pop</h1>
+
+            <p class="etiqueta-categoria">Adivina la cancion 8-bit</p>
+
+            <div class="cabecera-acciones-juego">
+
+                <button type="button" id="boton-instrucciones" class="boton-instrucciones">📖 Instrucciones</button>
+
+            </div>
+
+        </header>
+
+        <div id="panel-nivel-visual" class="panel-nivel-visual oculta">
+
+            <p id="texto-banda-nivel" class="texto-banda-nivel"></p>
+
+            <div id="marco-misterio" class="marco-calcomania marco-misterio">
+
+                <div class="visual-ecualizador" aria-hidden="true">
+
+                    <span class="barra-ecualizador"></span>
+
+                    <span class="barra-ecualizador"></span>
+
+                    <span class="barra-ecualizador"></span>
+
+                    <span class="barra-ecualizador"></span>
+
+                    <span class="barra-ecualizador"></span>
+
+                </div>
+
+                <p class="texto-misterio">?</p>
+
+            </div>
+
+        </div>
+
+        <div class="panel-hud">
+
+            <span id="texto-jugador" class="texto-hud texto-hud--jugador"></span>
+
+            <span id="texto-nivel" class="texto-hud">Nivel 1 / 10</span>
+
+            <span id="texto-timer" class="texto-hud">Tiempo: 0 s</span>
+
+            <span id="texto-puntaje" class="texto-hud">Puntos: 0</span>
+
+            <span id="texto-vidas" class="texto-hud">Vidas: 1</span>
+
+        </div>
+
+        <section id="pantalla-juego" class="pantalla-juego-seccion oculta">
+
+            <p id="texto-ayuda-juego" class="texto-ayuda">Suena la cancion. Cuando la reconozcas, detenela y responde.</p>
+
+            <div class="acciones-juego">
+
+                <button type="button" id="boton-detener-musica" class="boton-juego boton-juego--detener">Detener musica (Espacio / Enter)</button>
+
+            </div>
+
+        </section>
+
+        <section id="pantalla-respuesta" class="pantalla-juego-seccion oculta">
+
+            <p id="texto-ayuda-respuesta" class="texto-ayuda">Musica detenida. Escribe el nombre de la cancion o del artista.</p>
+
+            <div class="formulario-juego">
+
+                <label class="etiqueta-campo" for="input-respuesta">Tu respuesta</label>
+
+                <input
+
+                    type="text"
+
+                    id="input-respuesta"
+
+                    class="campo-texto"
+
+                    maxlength="80"
+
+                    autocomplete="off"
+
+                    placeholder="Nombre del artista o cancion">
+
+                <button type="button" id="boton-confirmar-respuesta" class="boton-juego">Confirmar respuesta</button>
+
+            </div>
+
+        </section>
+
+        <div class="controles-audio controles-audio--juego">
+            <label class="etiqueta-volumen" for="control-volumen">Volumen de musica</label>
+            <div class="fila-volumen">
+                <span class="icono-volumen" aria-hidden="true">🔊</span>
+                <input
+                    type="range"
+                    id="control-volumen"
+                    class="control-volumen"
+                    min="0"
+                    max="100"
+                    value="70"
+                    aria-valuemin="0"
+                    aria-valuemax="100"
+                    aria-valuenow="70">
+                <span id="texto-volumen" class="texto-volumen">70%</span>
+            </div>
+            <button type="button" id="boton-mute" class="boton-mute">Silenciar musica</button>
+        </div>
+
+        <button type="button" id="boton-volver-inicio" class="boton-juego boton-juego--secundario">Volver al menu</button>
+
+        <footer class="pie-juego">
+            <a
+                class="enlace-github"
+                href="https://github.com/SebaLardelli/MusicMania"
+                target="_blank"
+                rel="noopener noreferrer">
+                Ver repositorio en GitHub
+            </a>
+        </footer>
+
+    </div>
+
+    <audio id="audio-nivel"></audio>
+
+    <div id="modal-resultado" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-resultado-titulo">
+
+        <div class="modal-contenido">
+
+            <h2 id="modal-resultado-titulo" class="modal-titulo"></h2>
+
+            <div id="modal-imagen-contenedor" class="modal-imagen-contenedor oculta">
+
+                <img id="modal-imagen-nivel" class="modal-imagen-nivel" src="" alt="">
+
+            </div>
+
+            <p id="modal-resultado-cuerpo" class="modal-texto"></p>
+
+            <button type="button" id="modal-resultado-boton" class="modal-boton"></button>
+
+        </div>
+
+    </div>
+
+    <div id="modal-instrucciones" class="modal-overlay modal-overlay--instrucciones" role="dialog" aria-modal="true" aria-labelledby="titulo-instrucciones-juego">
+
+        <div class="modal-contenido modal-contenido--instrucciones">
+
+            <h2 id="titulo-instrucciones-juego" class="modal-titulo">🎤 Como jugar - Pop</h2>
+
+            <ul class="lista-instrucciones">
+
+                <li class="item-instruccion item-instruccion--destacado">
+                    <span class="emoticon-instruccion" aria-hidden="true">🎵</span>
+                    <span class="texto-item-instruccion">Vale adivinar el <strong>nombre de la cancion</strong> o el <strong>nombre del artista</strong>.</span>
+                </li>
+
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">🎧</span>
+                    <span class="texto-item-instruccion">Suena una cancion 8-bit. Escuchala hasta que la reconozcas.</span>
+                </li>
+
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">⏸️</span>
+                    <span class="texto-item-instruccion">Detene la musica con la barra <strong>Espaciadora</strong>, <strong>Enter</strong> o el boton <strong>Detener musica</strong>.</span>
+                </li>
+
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">⌨️</span>
+                    <span class="texto-item-instruccion">Escribi tu respuesta y confirma con <strong>Enter</strong> o <strong>Confirmar respuesta</strong>.</span>
+                </li>
+
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">⚡</span>
+                    <span class="texto-item-instruccion">El temporizador sube mientras escuchas: menos segundos = mas puntos al acertar.</span>
+                </li>
+
+                <li class="item-instruccion">
+                    <span class="emoticon-instruccion" aria-hidden="true">❤️</span>
+                    <span class="texto-item-instruccion">Tenés <strong>1 vida</strong>. Si fallas o se agota el tiempo, perdes la partida 💀.</span>
+                </li>
+
+            </ul>
+
+            <p id="texto-instrucciones-tiempo" class="texto-instrucciones-tiempo"></p>
+
+            <div class="acciones-instrucciones">
+
+                <button type="button" id="modal-instrucciones-cerrar" class="modal-boton">✅ Entendido</button>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script src="js/datos/datos-niveles-pop.js"></script>
+    <script src="js/config/juego-config-pop.js"></script>
+    <script src="js/namespaces/utilidades-texto.js"></script>
+    <script src="js/namespaces/almacenamiento-jugador.js"></script>
+    <script src="js/namespaces/almacenamiento-records.js"></script>
+    <script src="js/namespaces/almacenamiento-volumen.js"></script>
+    <script src="js/namespaces/control-volumen.js"></script>
+    <script src="js/namespaces/juego-sonidos.js"></script>
+    <script src="js/namespaces/juego-logica.js"></script>
+    <script src="js/namespaces/juego-ui.js"></script>
+    <script src="js/namespaces/instrucciones-ui.js"></script>
+    <script src="js/estado/juego-estado.js"></script>
+    <script src="js/estado/juego-ui-estado.js"></script>
+    <script src="js/estado/control-volumen-estado.js"></script>
+    <script src="js/estado/juego-sonidos-estado.js"></script>
+    <script src="js/funciones/utilidades-texto/reemplazar-acentos.js"></script>
+    <script src="js/funciones/utilidades-texto/normalizar-texto.js"></script>
+    <script src="js/funciones/utilidades-texto/respuesta-es-correcta.js"></script>
+    <script src="js/funciones/utilidades-texto/nombre-jugador-es-valido.js"></script>
+    <script src="js/funciones/utilidades-texto/codificar-ruta-archivo.js"></script>
+    <script src="js/funciones/almacenamiento-jugador/obtener-nombre.js"></script>
+    <script src="js/funciones/almacenamiento-jugador/guardar-nombre.js"></script>
+    <script src="js/funciones/almacenamiento-records/obtener-records-completos.js"></script>
+    <script src="js/funciones/almacenamiento-records/guardar-records-completos.js"></script>
+    <script src="js/funciones/almacenamiento-records/obtener-record-categoria.js"></script>
+    <script src="js/funciones/almacenamiento-records/actualizar-record-si-mejora.js"></script>
+    <script src="js/funciones/almacenamiento-volumen/volumen-por-defecto.js"></script>
+    <script src="js/funciones/almacenamiento-volumen/normalizar.js"></script>
+    <script src="js/funciones/almacenamiento-volumen/obtener-volumen.js"></script>
+    <script src="js/funciones/almacenamiento-volumen/guardar-volumen.js"></script>
+    <script src="js/funciones/control-volumen/actualizar-texto-volumen.js"></script>
+    <script src="js/funciones/control-volumen/actualizar-boton-mute.js"></script>
+    <script src="js/funciones/control-volumen/aplicar-volumen-audio.js"></script>
+    <script src="js/funciones/control-volumen/sincronizar-slider.js"></script>
+    <script src="js/funciones/control-volumen/guardar-y-notificar.js"></script>
+    <script src="js/funciones/control-volumen/alternar-mute.js"></script>
+    <script src="js/funciones/control-volumen/obtener-volumen-actual.js"></script>
+    <script src="js/funciones/control-volumen/init.js"></script>
+    <script src="js/funciones/juego-sonidos/obtener-contexto.js"></script>
+    <script src="js/funciones/juego-sonidos/reanudar-contexto.js"></script>
+    <script src="js/funciones/juego-sonidos/reproducir-nota.js"></script>
+    <script src="js/funciones/juego-sonidos/obtener-volumen-efectos.js"></script>
+    <script src="js/funciones/juego-sonidos/reproducir-tick.js"></script>
+    <script src="js/funciones/juego-sonidos/reproducir-tiempo-agotado.js"></script>
+    <script src="js/funciones/juego-logica/init.js"></script>
+    <script src="js/funciones/juego-logica/calcular-puntos-por-tiempo.js"></script>
+    <script src="js/funciones/juego-logica/obtener-nivel-actual.js"></script>
+    <script src="js/funciones/juego-logica/obtener-total-niveles.js"></script>
+    <script src="js/funciones/juego-logica/detener-timer-respuesta.js"></script>
+    <script src="js/funciones/juego-logica/detener-timer.js"></script>
+    <script src="js/funciones/juego-logica/iniciar-timer.js"></script>
+    <script src="js/funciones/juego-logica/limpiar-eventos-audio.js"></script>
+    <script src="js/funciones/juego-logica/detener-audio-nivel.js"></script>
+    <script src="js/funciones/juego-logica/intentar-reproducir-audio.js"></script>
+    <script src="js/funciones/juego-logica/reproducir-audio-nivel.js"></script>
+    <script src="js/funciones/juego-logica/reproducir-nivel-actual.js"></script>
+    <script src="js/funciones/juego-logica/reiniciar-partida-interna.js"></script>
+    <script src="js/funciones/juego-logica/agotar-tiempo-respuesta.js"></script>
+    <script src="js/funciones/juego-logica/iniciar-timer-respuesta.js"></script>
+    <script src="js/funciones/juego-logica/pausar-para-responder.js"></script>
+    <script src="js/funciones/juego-logica/confirmar-respuesta.js"></script>
+    <script src="js/funciones/juego-logica/registrar-record-partida.js"></script>
+    <script src="js/funciones/juego-logica/comenzar-partida-desde-menu.js"></script>
+    <script src="js/funciones/juego-logica/reiniciar-partida-completa.js"></script>
+    <script src="js/funciones/juego-logica/obtener-estado.js"></script>
+    <script src="js/funciones/juego-logica/obtener-limite-segundos-respuesta.js"></script>
+    <script src="js/funciones/juego-ui/obtener-elementos.js"></script>
+    <script src="js/funciones/juego-ui/ocultar-todas-pantallas.js"></script>
+    <script src="js/funciones/juego-ui/ocultar-panel-nivel.js"></script>
+    <script src="js/funciones/juego-ui/ocultar-imagen-modal.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-imagen-modal.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-panel-misterio.js"></script>
+    <script src="js/funciones/juego-ui/actualizar-hud.js"></script>
+    <script src="js/funciones/juego-ui/actualizar-color-timer.js"></script>
+    <script src="js/funciones/juego-ui/actualizar-timer.js"></script>
+    <script src="js/funciones/juego-ui/actualizar-color-timer-respuesta.js"></script>
+    <script src="js/funciones/juego-ui/actualizar-timer-respuesta.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-escuchando.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-error-audio.js"></script>
+    <script src="js/funciones/juego-ui/ocultar-error-audio.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-respuesta.js"></script>
+    <script src="js/funciones/juego-ui/abrir-modal.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-nivel-superado.js"></script>
+    <script src="js/funciones/juego-ui/formatear-mensaje-nuevo-record.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-derrota.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-derrota-por-tiempo.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-victoria.js"></script>
+    <script src="js/funciones/juego-ui/enlazar-eventos.js"></script>
+    <script src="js/funciones/juego-ui/init.js"></script>
+    <script src="js/funciones/instrucciones-ui/actualizar-texto-dinamico.js"></script>
+    <script src="js/funciones/instrucciones-ui/init.js"></script>
+    <script src="js/juego-main.js"></script>
+</body>
+
+</html>
