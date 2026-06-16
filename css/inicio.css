@@ -429,7 +429,28 @@ body.pagina-inicio {
     background: #ffe66d;
 }
 
+@media (max-width: 768px) {
+    .contenido-inicio {
+        padding: 1.25rem 1rem;
+    }
+
+    .modal-contenido {
+        max-width: 90vw;
+        padding: 1.25rem;
+    }
+
+    .tabla-records th,
+    .tabla-records td {
+        padding: 0.4rem 0.3rem;
+    }
+}
+
 @media (max-width: 480px) {
+    .contenido-inicio {
+        padding: 1rem 0.75rem;
+        gap: 1rem;
+    }
+
     .lista-categorias {
         flex-direction: column;
         align-items: center;
@@ -438,5 +459,27 @@ body.pagina-inicio {
     .boton-categoria {
         width: 100%;
         max-width: 16rem;
+    }
+
+    .tabla-records {
+        font-size: 0.34rem;
+    }
+
+    .tabla-records th,
+    .tabla-records td {
+        padding: 0.35rem 0.25rem;
+    }
+
+    .modal-contenido {
+        max-width: 100%;
+        padding: 1rem 0.85rem;
+    }
+
+    .modal-titulo {
+        font-size: 0.55rem;
+    }
+
+    .panel-jugador {
+        padding: 0.85rem 0.75rem;
     }
 }

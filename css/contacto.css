@@ -199,8 +199,30 @@ body.pagina-contacto {
     opacity: 0.85;
 }
 
+@media (max-width: 768px) {
+    .contenido-contacto {
+        padding: 1.25rem 1rem;
+    }
+
+    .panel-contacto,
+    .formulario-contacto {
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 480px) {
+    .contenido-contacto {
+        padding: 1rem 0.75rem;
+    }
+
     .panel-contacto {
-        padding: 0.85rem 1rem;
+        padding: 0.85rem 0.75rem;
+    }
+
+    .boton-enviar,
+    .boton-enviar--enlace {
+        width: 100%;
+        max-width: 18rem;
+        text-align: center;
     }
 }

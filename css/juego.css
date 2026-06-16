@@ -498,12 +498,59 @@ body.pagina-juego {
     color: #ffe66d;
 }
 
+@media (max-width: 768px) {
+    .contenedor-juego {
+        padding: 1.25rem 1rem;
+    }
+
+    .pantalla-juego-seccion {
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    .modal-contenido {
+        max-width: 90vw;
+        padding: 1.25rem;
+    }
+}
+
 @media (max-width: 480px) {
     .panel-hud {
         flex-direction: column;
+        width: 100%;
+    }
+
+    .texto-hud {
+        width: 100%;
+        text-align: center;
+    }
+
+    .texto-hud--jugador {
+        max-width: 100%;
     }
 
     .contenedor-juego {
-        padding: 1rem;
+        padding: 1rem 0.75rem;
+        gap: 0.85rem;
+    }
+
+    .pantalla-juego-seccion {
+        padding: 0.85rem;
+    }
+
+    .boton-juego,
+    .boton-juego--secundario,
+    .boton-juego--detener {
+        width: 100%;
+        max-width: 18rem;
+    }
+
+    .modal-contenido {
+        max-width: 100%;
+        padding: 1rem 0.85rem;
+    }
+
+    .modal-titulo {
+        font-size: 0.55rem;
     }
 }

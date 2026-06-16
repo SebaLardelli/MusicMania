@@ -64,3 +64,31 @@
     max-width: 32rem;
     margin-top: 0.25rem;
 }
+
+@media (max-width: 768px) {
+    .controles-audio,
+    .controles-audio--juego {
+        max-width: 100%;
+    }
+
+    .control-volumen {
+        min-width: 6rem;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .fila-volumen {
+        flex-direction: column;
+    }
+
+    .control-volumen {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .boton-mute {
+        width: 100%;
+        max-width: 14rem;
+    }
+}
