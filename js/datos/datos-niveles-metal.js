@@ -56,7 +56,7 @@ var datosNivelesMetal = [
         banda: "Korn",
         cancion: "Freak on a Leash",
         rutaAudio: "assets/categorias/Metal/Korn - 5/Freak on a Leash [8 Bit Tribute to Korn] - 8 Bit Universe - 8 Bit Universe.mp3",
-        rutaImagen: "assets/categorias/Metal/Korn - 5/_F7E4309D-FB91-4C24-A438-2395A43F5930_-removebg-preview.png",
+        rutaImagen: "assets/categorias/Metal/Korn - 5/korn-logo.png",
         respuestasValidas: [
             "Korn",
             "Freak on a Leash",
