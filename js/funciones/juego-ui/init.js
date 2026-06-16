@@ -2,6 +2,7 @@
 
 JuegoUi.init = function () {
     JuegoUi.obtenerElementos();
+    JuegoUi.renderizarBarrasEcualizador();
     JuegoUi.ocultarPanelNivel();
     JuegoUiEstado.modalResultado.classList.remove("visible");
     JuegoUi.enlazarEventos();

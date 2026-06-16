@@ -119,6 +119,13 @@ body.pagina-juego {
     text-transform: uppercase;
 }
 
+.texto-desarrollador {
+    font-size: clamp(0.34rem, 1.4vw, 0.42rem);
+    color: #ffe66d;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+}
+
 .titulo-categoria {
     font-size: clamp(1rem, 4.5vw, 1.6rem);
     color: var(--color-genero-claro);

@@ -74,6 +74,13 @@ body.pagina-inicio {
     line-height: 1.5;
 }
 
+.texto-desarrollador {
+    font-size: clamp(0.38rem, 1.6vw, 0.48rem);
+    color: #ffe66d;
+    letter-spacing: 0.06em;
+    line-height: 1.6;
+}
+
 .subtitulo-juego {
     font-size: clamp(0.45rem, 2vw, 0.65rem);
     color: var(--color-acento);

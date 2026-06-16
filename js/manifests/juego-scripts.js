@@ -75,6 +75,7 @@ var MUSICMANIA_SCRIPT_ORDER = [
     "js/funciones/juego-ui/ocultar-todas-pantallas.js",
     "js/funciones/juego-ui/ocultar-panel-nivel.js",
     "js/funciones/juego-ui/ocultar-imagen-modal.js",
+    "js/funciones/juego-ui/renderizar-barras-ecualizador.js",
     "js/funciones/juego-ui/mostrar-imagen-modal.js",
     "js/funciones/juego-ui/mostrar-panel-misterio.js",
     "js/funciones/juego-ui/actualizar-hud.js",
