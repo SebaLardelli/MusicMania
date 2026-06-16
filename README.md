@@ -2,7 +2,11 @@
 
 Inspirado en streams como OLGA y similares. Juego web con estética 8-bit donde el jugador debe reconocer temas musicales y adivinar la respuesta correcta en el menor tiempo posible.
 
-**Repositorio:** [https://github.com/SebaLardelli/MusicMania](https://github.com/SebaLardelli/MusicMania)
+**Repositorio:** [https://github.com/SebaLardelli/MusicMania](https://github.com/SebaLardelli/MusicMania)+
+
+**Desarrollador:** Sebastián Lardelli
+
+## Como ejecutar el proyecto
 
 **Demo en vivo (GitHub Pages):** [https://sebalardelli.github.io/MusicMania/](https://sebalardelli.github.io/MusicMania/)
 
@@ -70,17 +74,20 @@ La cantidad de niveles depende de las carpetas en `assets/categorias/`. Cada niv
 - Tabla de mejores marcas por categoria (mejor puntaje y tiempo).
 - Modal de **Instrucciones** (sin `alert`).
 - Control de **volumen** con slider, porcentaje y boton silenciar (persistente en `localStorage`).
+- Credito del desarrollador visible en el menu y en cada pantalla de juego.
 
 **Pantallas de juego (una por categoria)**
 - Misma logica compartida modular en `js/funciones/juego-*` + `juego-main.js`.
 - Configuracion por categoria: `js/config/juego-config-*.js` + `js/datos/datos-niveles-*.js`.
 - HUD dinamico: jugador, nivel, tiempo, puntos, vidas.
-- Modales para acierto, fin del juego y victoria (con imagen de calcomania al acertar).
+- Ecualizador animado en el panel de misterio (barras generadas con JS al iniciar).
+- Modales para acierto, fin del juego y victoria (calcomania al acertar; imagen `fin-del-juego.png` al perder).
 - Pitidos de cuenta regresiva con Web Audio API (`js/funciones/juego-sonidos/`), respetando el volumen configurado.
 - Reinicio de partida sin recargar la pagina.
 - Temas visuales por genero (colores en `juego.css`).
 - Instrucciones especificas por categoria.
 - Control de volumen en partida.
+- Diseño responsive con media queries en `inicio.css`, `juego.css`, `contacto.css`, `instrucciones.css` y `volumen.css`.
 
 **Arquitectura y buenas practicas (segun consigna)**
 - HTML5 semantico, `reset.css`, sin estilos ni JS inline.
@@ -95,7 +102,9 @@ La cantidad de niveles depende de las carpetas en `assets/categorias/`. Cada niv
 
 - Formulario con nombre, mail y mensaje.
 - Validaciones exclusivamente en JavaScript (nombre alfanumerico, mail valido, mensaje > 5 caracteres).
-- Al enviar, abre el cliente de correo del sistema operativo via `mailto:`.
+- Al enviar, abre el cliente de correo del sistema operativo via `mailto:` (destino configurable en `js/datos/datos-contacto.js`).
+- Boton opcional para abrir Gmail en el navegador.
+- Aviso si la pagina se abre con `file://` (el correo no funciona sin servidor HTTP).
 - Enlace visible desde el menu principal (`index.html`).
 
 ### Documentacion adicional
@@ -127,7 +136,7 @@ Referencia: `ExamenFinal-DAW-2026.txt`
 | Teclado y mouse | Cumplido |
 | Pantalla principal / menu | Cumplido |
 | Sin librerias externas en la logica | Cumplido |
-| Generacion dinamica de elementos | Cumplido (categorias, tabla de marcas) |
+| Generacion dinamica de elementos | Cumplido (categorias, tabla de marcas, barras del ecualizador) |
 | Persistencia con LocalStorage | Cumplido |
 | Pagina de Contacto | Cumplido |
 
@@ -177,6 +186,13 @@ Referencia: `ExamenFinal-DAW-2026.txt`
 5. **Pelis y Series** (10 niveles) — solo nombre de obra.
 6. **Juegos** (8 niveles) — solo nombre del videojuego.
 
+### Publicacion y ajustes para GitHub Pages
+- Demo publicada en GitHub Pages desde la rama configurada en el repositorio.
+- Rutas relativas en HTML, CSS y JS (sin `/` absoluto al dominio).
+- Nombres de archivos de imagen sin guion bajo inicial cuando Jekyll los ignoraba.
+- Imagen de fin del juego (`assets/juego/fin-del-juego.png`) en el modal de derrota.
+- Limpieza de formato en los HTML de juego (sin lineas vacias innecesarias).
+
 ---
 
 ### Organizacion de assets
@@ -188,6 +204,7 @@ Todo el contenido estatico (imagenes, audio y video) vive dentro de `assets/`, s
 | `assets/imagenes/` | Icono del sitio (`icono.png`) |
 | `assets/inicio/audio/` | Musica de fondo del menu |
 | `assets/inicio/video/` | Video de fondo del menu |
+| `assets/juego/` | Recursos compartidos del juego (`fin-del-juego.png`) |
 | `assets/categorias/` | MP3 e imagenes de cada nivel, agrupados por genero |
 
 Convencion por nivel dentro de `assets/categorias/`:
@@ -212,7 +229,7 @@ MusicMania/
   juego-metal.html
   juego-pelis-series.html
   juego-juegos.html
-  ExamenFinal-DAW-2026.txt
+  Prompts-IA.md
   README.md
   .gitignore
   css/
@@ -228,6 +245,7 @@ MusicMania/
     juego-main.js               # entry point juego
     datos/
       datos-categorias.js
+      datos-contacto.js
       datos-niveles-*.js
     config/
       juego-config-*.js
@@ -241,6 +259,7 @@ MusicMania/
       juego-logica/
       juego-ui/
       inicio-*/
+      contacto-formulario/
       instrucciones-ui/
     manifests/
       inicio-scripts.js         # referencia de orden
@@ -251,6 +270,8 @@ MusicMania/
     inicio/
       audio/death-by-glamour.mp3
       video/videoplayback.mp4
+    juego/
+      fin-del-juego.png
     categorias/
       Rock/
       Pop/
@@ -269,17 +290,3 @@ MusicMania/
 - JavaScript ES5 (`var`, funciones tradicionales, IIFE, `"use strict"`)
 - Web Audio API (pitidos del temporizador)
 - LocalStorage
-
----
-
-## Como ejecutar el proyecto
-
-Los archivos MP3 deben servirse por HTTP. Abrir con `file://` puede fallar al cargar audio.
-
-**Opcion recomendada:** abrir la demo publicada en [https://sebalardelli.github.io/MusicMania/](https://sebalardelli.github.io/MusicMania/)
-
----
-
-## Repositorio
-
-[https://github.com/SebaLardelli/MusicMania](https://github.com/SebaLardelli/MusicMania)
