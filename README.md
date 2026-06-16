@@ -4,6 +4,8 @@ Inspirado en streams como OLGA y similares. Juego web con estética 8-bit donde 
 
 **Repositorio:** [https://github.com/SebaLardelli/MusicMania](https://github.com/SebaLardelli/MusicMania)
 
+**Demo en vivo (GitHub Pages):** [https://sebalardelli.github.io/MusicMania/](https://sebalardelli.github.io/MusicMania/)
+
 ---
 
 ## Descripcion breve
@@ -273,6 +275,10 @@ MusicMania/
 ## Como ejecutar el proyecto
 
 Los archivos MP3 deben servirse por HTTP. Abrir con `file://` puede fallar al cargar audio.
+
+**Opcion recomendada:** abrir la demo publicada en [https://sebalardelli.github.io/MusicMania/](https://sebalardelli.github.io/MusicMania/)
+
+**Con XAMPP en local:**
 
 1. Copiar el proyecto a la carpeta de XAMPP (ej. `C:\xampp\htdocs\MusicMania\`).
 2. Iniciar Apache en XAMPP.
