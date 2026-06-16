@@ -6,7 +6,7 @@ JuegoUi.mostrarImagenModal = function (nivel) {
         return;
     }
     rutaCodificada = UtilidadesTexto.codificarRutaArchivo(nivel.rutaImagen);
-    JuegoUiEstado.modalImagenNivel.src = rutaCodificada + "?v=2";
+    JuegoUiEstado.modalImagenNivel.src = rutaCodificada + "?v=3";
     JuegoUiEstado.modalImagenNivel.alt = "Calcomania de " + nivel.banda;
     JuegoUiEstado.modalImagenContenedor.classList.remove("oculta");
 };

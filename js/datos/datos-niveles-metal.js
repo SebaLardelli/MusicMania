@@ -69,7 +69,7 @@ var datosNivelesMetal = [
         banda: "Megadeth",
         cancion: "Peace Sells",
         rutaAudio: "assets/categorias/Metal/Megadeth - 6/Peace Sells [8 Bit Tribute to Megadeth] - 8 Bit Universe - 8 Bit Universe.mp3",
-        rutaImagen: "assets/categorias/Metal/Megadeth - 6/_07CE9849-AB25-43E0-B2C7-D2D6EF850F85_-removebg-preview.png",
+        rutaImagen: "assets/categorias/Metal/Megadeth - 6/megadeth-logo.png",
         respuestasValidas: [
             "Megadeth",
             "Peace Sells"
