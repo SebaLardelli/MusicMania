@@ -1,7 +1,7 @@
 "use strict";
 
 AlmacenamientoRecords.obtenerRecordCategoria = function (idCategoria) {
-    var records = AlmacenamientoRecords.obtenerRecordsCompletos();
+    const records = AlmacenamientoRecords.obtenerRecordsCompletos();
     if (records[idCategoria]) {
         return records[idCategoria];
     }

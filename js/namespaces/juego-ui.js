@@ -1,3 +1,3 @@
 "use strict";
 
-var JuegoUi = {};
+const JuegoUi = {};

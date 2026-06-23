@@ -1,11 +1,11 @@
 "use strict";
 
 InicioCategorias.restaurarSeleccion = function () {
-    var datosGuardados;
-    var parseados;
-    var datoCompleto;
-    var indice;
-    var botones;
+    let datosGuardados;
+    let parseados;
+    let datoCompleto;
+    let indice;
+    let botones;
     if (!window.localStorage) {
         return;
     }

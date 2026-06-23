@@ -1,7 +1,7 @@
 "use strict";
 
 InicioJugador.restaurarNombre = function () {
-    var guardado;
+    let guardado;
     if (!InicioJugadorEstado.inputNombre) {
         return;
     }

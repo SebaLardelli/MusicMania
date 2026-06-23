@@ -1,12 +1,12 @@
 "use strict";
 
 InicioRecords.renderizarTabla = function () {
-    var records;
-    var indice;
-    var categoria;
-    var fila;
-    var record;
-    var textoNivel;
+    let records;
+    let indice;
+    let categoria;
+    let fila;
+    let record;
+    let textoNivel;
 
     if (!InicioRecordsEstado.cuerpoTabla || !datosCategorias) {
         return;

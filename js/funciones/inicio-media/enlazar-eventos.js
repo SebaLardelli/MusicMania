@@ -1,7 +1,7 @@
 "use strict";
 
 InicioMedia.enlazarEventos = function () {
-    var botonArranque = document.getElementById("boton-arranque");
+    const botonArranque = document.getElementById("boton-arranque");
     if (InicioMediaEstado.videoFondo) {
         InicioMediaEstado.videoFondo.addEventListener("loadedmetadata", InicioMedia.marcarListo);
     }

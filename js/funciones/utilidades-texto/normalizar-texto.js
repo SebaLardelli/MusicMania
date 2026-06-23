@@ -1,7 +1,7 @@
 "use strict";
 
 UtilidadesTexto.normalizarTexto = function (texto) {
-    var resultado;
+    let resultado;
     if (!texto || typeof texto !== "string") {
         return "";
     }

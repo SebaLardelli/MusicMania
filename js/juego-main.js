@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.body.classList.add(configuracionJuego.clasePagina);
     }
     JuegoLogica.init(configuracionJuego);
+    JuegoSonidosTimer.init();
     ControlVolumen.init({
         idAudio: "audio-nivel",
         idSlider: "control-volumen",

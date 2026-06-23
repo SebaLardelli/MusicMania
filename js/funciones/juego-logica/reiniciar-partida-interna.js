@@ -1,7 +1,7 @@
 "use strict";
 
 JuegoLogica.reiniciarPartidaInterna = function (mantenerNombre) {
-    var nombreGuardado = JuegoEstado.nombreJugador;
+    const nombreGuardado = JuegoEstado.nombreJugador;
     JuegoLogica.detenerTimer();
     JuegoLogica.detenerAudioNivel();
     JuegoEstado.indiceNivelActual = 0;

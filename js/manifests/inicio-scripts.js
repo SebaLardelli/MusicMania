@@ -6,7 +6,7 @@
  * Copiar estos <script> en los HTML correspondientes.
  */
 
-var MUSICMANIA_SCRIPT_ORDER = [
+const MUSICMANIA_SCRIPT_ORDER = [
     "js/datos/datos-categorias.js",
     "js/namespaces/utilidades-texto.js",
     "js/namespaces/almacenamiento-jugador.js",
@@ -25,7 +25,6 @@ var MUSICMANIA_SCRIPT_ORDER = [
     "js/estado/control-volumen-estado.js",
     "js/funciones/utilidades-texto/reemplazar-acentos.js",
     "js/funciones/utilidades-texto/normalizar-texto.js",
-    "js/funciones/utilidades-texto/respuesta-es-correcta.js",
     "js/funciones/utilidades-texto/nombre-jugador-es-valido.js",
     "js/funciones/utilidades-texto/codificar-ruta-archivo.js",
     "js/funciones/almacenamiento-jugador/obtener-nombre.js",

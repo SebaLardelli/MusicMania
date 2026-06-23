@@ -43,17 +43,10 @@
             </div>
         </section>
         <section id="pantalla-respuesta" class="pantalla-juego-seccion oculta">
-            <p id="texto-ayuda-respuesta" class="texto-ayuda">Musica detenida. Escribe solo el nombre de la pelicula o la serie.</p>
+            <p id="texto-ayuda-respuesta" class="texto-ayuda">Musica detenida. Elegi el tema correcto de la misma pelicula o serie.</p>
             <div class="formulario-juego">
-                <label class="etiqueta-campo" for="input-respuesta">Tu respuesta</label>
-                <input
-                    type="text"
-                    id="input-respuesta"
-                    class="campo-texto"
-                    maxlength="80"
-                    autocomplete="off"
-                    placeholder="Nombre de la pelicula o serie">
-                <button type="button" id="boton-confirmar-respuesta" class="boton-juego">Confirmar respuesta</button>
+                <p class="etiqueta-campo">Elegi el tema correcto</p>
+                <div id="contenedor-opciones-respuesta" class="opciones-respuesta" role="listbox" aria-label="Opciones de tema"></div>
             </div>
         </section>
         <div class="controles-audio controles-audio--juego">
@@ -86,6 +79,9 @@
         </footer>
     </div>
     <audio id="audio-nivel"></audio>
+    <audio id="audio-timer-tick" preload="auto" src="assets/juego/sonidos/tick.wav"></audio>
+    <audio id="audio-timer-tick-urgente" preload="auto" src="assets/juego/sonidos/tick-urgente.wav"></audio>
+    <audio id="audio-timer-agotado" preload="auto" src="assets/juego/sonidos/tiempo-agotado.wav"></audio>
     <div id="modal-resultado" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-resultado-titulo">
         <div class="modal-contenido">
             <h2 id="modal-resultado-titulo" class="modal-titulo"></h2>
@@ -102,7 +98,7 @@
             <ul class="lista-instrucciones">
                 <li class="item-instruccion item-instruccion--destacado">
                     <span class="emoticon-instruccion" aria-hidden="true">🎬</span>
-                    <span class="texto-item-instruccion">Solo vale el <strong>nombre de la pelicula o la serie</strong>. No se acepta el artista ni el titulo del tema.</span>
+                    <span class="texto-item-instruccion">Elegi el <strong>tema correcto</strong> entre opciones de la misma pelicula o serie.</span>
                 </li>
                 <li class="item-instruccion">
                     <span class="emoticon-instruccion" aria-hidden="true">🎧</span>
@@ -114,7 +110,7 @@
                 </li>
                 <li class="item-instruccion">
                     <span class="emoticon-instruccion" aria-hidden="true">⌨️</span>
-                    <span class="texto-item-instruccion">Escribi tu respuesta y confirma con <strong>Enter</strong> o <strong>Confirmar respuesta</strong>.</span>
+                    <span class="texto-item-instruccion">Elegi la opcion correcta con un <strong>click</strong>.</span>
                 </li>
                 <li class="item-instruccion">
                     <span class="emoticon-instruccion" aria-hidden="true">⚡</span>
@@ -132,23 +128,24 @@
         </div>
     </div>
     <script src="js/datos/datos-niveles-pelis-series.js"></script>
+    <script src="js/datos/datos-opciones-por-banda.js"></script>
+    <script src="js/datos/datos-sonidos-timer-respuesta.js"></script>
     <script src="js/config/juego-config-pelis-series.js"></script>
     <script src="js/namespaces/utilidades-texto.js"></script>
     <script src="js/namespaces/almacenamiento-jugador.js"></script>
     <script src="js/namespaces/almacenamiento-records.js"></script>
     <script src="js/namespaces/almacenamiento-volumen.js"></script>
     <script src="js/namespaces/control-volumen.js"></script>
-    <script src="js/namespaces/juego-sonidos.js"></script>
+    <script src="js/namespaces/juego-sonidos-timer.js"></script>
     <script src="js/namespaces/juego-logica.js"></script>
     <script src="js/namespaces/juego-ui.js"></script>
     <script src="js/namespaces/instrucciones-ui.js"></script>
     <script src="js/estado/juego-estado.js"></script>
     <script src="js/estado/juego-ui-estado.js"></script>
     <script src="js/estado/control-volumen-estado.js"></script>
-    <script src="js/estado/juego-sonidos-estado.js"></script>
+    <script src="js/estado/juego-sonidos-timer-estado.js"></script>
     <script src="js/funciones/utilidades-texto/reemplazar-acentos.js"></script>
     <script src="js/funciones/utilidades-texto/normalizar-texto.js"></script>
-    <script src="js/funciones/utilidades-texto/respuesta-es-correcta.js"></script>
     <script src="js/funciones/utilidades-texto/nombre-jugador-es-valido.js"></script>
     <script src="js/funciones/utilidades-texto/codificar-ruta-archivo.js"></script>
     <script src="js/funciones/almacenamiento-jugador/obtener-nombre.js"></script>
@@ -169,12 +166,11 @@
     <script src="js/funciones/control-volumen/alternar-mute.js"></script>
     <script src="js/funciones/control-volumen/obtener-volumen-actual.js"></script>
     <script src="js/funciones/control-volumen/init.js"></script>
-    <script src="js/funciones/juego-sonidos/obtener-contexto.js"></script>
-    <script src="js/funciones/juego-sonidos/reanudar-contexto.js"></script>
-    <script src="js/funciones/juego-sonidos/reproducir-nota.js"></script>
-    <script src="js/funciones/juego-sonidos/obtener-volumen-efectos.js"></script>
-    <script src="js/funciones/juego-sonidos/reproducir-tick.js"></script>
-    <script src="js/funciones/juego-sonidos/reproducir-tiempo-agotado.js"></script>
+    <script src="js/funciones/juego-sonidos-timer/init.js"></script>
+    <script src="js/funciones/juego-sonidos-timer/obtener-volumen.js"></script>
+    <script src="js/funciones/juego-sonidos-timer/reproducir-audio.js"></script>
+    <script src="js/funciones/juego-sonidos-timer/reproducir-tick.js"></script>
+    <script src="js/funciones/juego-sonidos-timer/reproducir-tiempo-agotado.js"></script>
     <script src="js/funciones/juego-logica/init.js"></script>
     <script src="js/funciones/juego-logica/calcular-puntos-por-tiempo.js"></script>
     <script src="js/funciones/juego-logica/obtener-nivel-actual.js"></script>
@@ -197,6 +193,7 @@
     <script src="js/funciones/juego-logica/reiniciar-partida-completa.js"></script>
     <script src="js/funciones/juego-logica/obtener-estado.js"></script>
     <script src="js/funciones/juego-logica/obtener-limite-segundos-respuesta.js"></script>
+    <script src="js/funciones/juego-logica/obtener-opciones-respuesta.js"></script>
     <script src="js/funciones/juego-ui/obtener-elementos.js"></script>
     <script src="js/funciones/juego-ui/ocultar-todas-pantallas.js"></script>
     <script src="js/funciones/juego-ui/ocultar-panel-nivel.js"></script>
@@ -212,6 +209,7 @@
     <script src="js/funciones/juego-ui/mostrar-escuchando.js"></script>
     <script src="js/funciones/juego-ui/mostrar-error-audio.js"></script>
     <script src="js/funciones/juego-ui/ocultar-error-audio.js"></script>
+    <script src="js/funciones/juego-ui/renderizar-opciones-respuesta.js"></script>
     <script src="js/funciones/juego-ui/mostrar-respuesta.js"></script>
     <script src="js/funciones/juego-ui/abrir-modal.js"></script>
     <script src="js/funciones/juego-ui/mostrar-nivel-superado.js"></script>

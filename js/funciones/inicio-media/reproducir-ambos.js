@@ -1,8 +1,8 @@
 "use strict";
 
 InicioMedia.reproducirAmbos = function () {
-    var promesaVideo;
-    var promesaAudio;
+    let promesaVideo;
+    let promesaAudio;
     if (!InicioMediaEstado.videoFondo || !InicioMediaEstado.audioFondo) {
         return;
     }

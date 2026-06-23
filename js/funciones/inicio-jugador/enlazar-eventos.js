@@ -1,7 +1,7 @@
 "use strict";
 
 InicioJugador.enlazarEventos = function () {
-    var botonArranque = document.getElementById("boton-arranque");
+    const botonArranque = document.getElementById("boton-arranque");
 
     if (InicioJugadorEstado.inputNombre) {
         InicioJugadorEstado.inputNombre.addEventListener("blur", InicioJugador.guardarSiEsValido);

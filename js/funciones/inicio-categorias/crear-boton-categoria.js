@@ -1,7 +1,7 @@
 "use strict";
 
 InicioCategorias.crearBotonCategoria = function (dato) {
-    var boton = document.createElement("button");
+    const boton = document.createElement("button");
     boton.type = "button";
     boton.className = "boton-categoria " + dato.claseCalco;
     boton.setAttribute("data-categoria-id", dato.id);

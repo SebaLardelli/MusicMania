@@ -1,8 +1,8 @@
 "use strict";
 
 JuegoLogica.reproducirAudioNivel = function (ruta) {
-    var rutaCodificada;
-    var audioListo = false;
+    let rutaCodificada;
+    let audioListo = false;
     if (!JuegoEstado.audioNivel) {
         JuegoEstado.audioNivel = document.getElementById("audio-nivel");
     }

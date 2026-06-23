@@ -1,6 +1,6 @@
 "use strict";
 
-JuegoSonidos.obtenerVolumenEfectos = function () {
+JuegoSonidosTimer.obtenerVolumen = function () {
     if (typeof AlmacenamientoVolumen !== "undefined") {
         return AlmacenamientoVolumen.obtenerVolumen();
     }

@@ -1,3 +1,3 @@
 "use strict";
 
-var InicioCategorias = {};
+const InicioCategorias = {};

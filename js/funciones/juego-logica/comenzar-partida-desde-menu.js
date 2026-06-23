@@ -1,7 +1,7 @@
 "use strict";
 
 JuegoLogica.comenzarPartidaDesdeMenu = function () {
-    var nombreGuardado = AlmacenamientoJugador.obtenerNombre();
+    const nombreGuardado = AlmacenamientoJugador.obtenerNombre();
     if (!UtilidadesTexto.nombreJugadorEsValido(nombreGuardado)) {
         window.location.href = "index.html";
         return false;

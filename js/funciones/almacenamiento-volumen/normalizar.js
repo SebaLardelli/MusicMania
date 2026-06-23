@@ -1,7 +1,7 @@
 "use strict";
 
 AlmacenamientoVolumen.normalizar = function (valor) {
-    var numero = parseFloat(valor);
+    const numero = parseFloat(valor);
     if (isNaN(numero)) {
         return AlmacenamientoVolumen.volumenPorDefecto;
     }

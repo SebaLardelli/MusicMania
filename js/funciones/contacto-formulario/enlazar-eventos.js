@@ -5,7 +5,7 @@ ContactoFormulario.enlazarEventos = function () {
         return;
     }
     ContactoFormularioEstado.formulario.addEventListener("submit", function (evento) {
-        var resultado;
+        let resultado;
 
         evento.preventDefault();
         ContactoFormulario.limpiarErrores();

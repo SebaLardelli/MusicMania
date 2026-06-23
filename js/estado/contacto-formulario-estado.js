@@ -1,6 +1,6 @@
 "use strict";
 
-var ContactoFormularioEstado = {
+const ContactoFormularioEstado = {
     formulario: null,
     inputNombre: null,
     inputMail: null,

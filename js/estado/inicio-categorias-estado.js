@@ -1,6 +1,6 @@
 "use strict";
 
-var InicioCategoriasEstado = {
+const InicioCategoriasEstado = {
     contenedorLista: null,
     categoriaActiva: null,
     claveStorage: "musicmania_categoria"

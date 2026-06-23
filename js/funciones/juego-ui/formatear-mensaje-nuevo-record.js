@@ -1,9 +1,9 @@
 "use strict";
 
 JuegoUi.formatearMensajeNuevoRecord = function (resultado) {
-    var partes = [];
-    var indice;
-    var texto = "";
+    const partes = [];
+    let indice;
+    let texto = "";
 
     if (!resultado || !resultado.mejoro) {
         return "";

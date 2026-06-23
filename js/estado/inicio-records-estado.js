@@ -1,5 +1,5 @@
 "use strict";
 
-var InicioRecordsEstado = {
+const InicioRecordsEstado = {
     cuerpoTabla: null
 };

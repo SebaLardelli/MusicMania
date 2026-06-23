@@ -1,7 +1,7 @@
 "use strict";
 
 JuegoLogica.reproducirNivelActual = function () {
-    var nivel = JuegoLogica.obtenerNivelActual();
+    const nivel = JuegoLogica.obtenerNivelActual();
     if (!nivel) {
         return;
     }

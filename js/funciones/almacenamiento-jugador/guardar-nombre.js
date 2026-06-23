@@ -1,8 +1,8 @@
 "use strict";
 
 AlmacenamientoJugador.guardarNombre = function (nombre) {
-    var limpio = "";
-    var claveNombre = "musicmania_nombre_jugador";
+    let limpio = "";
+    const claveNombre = "musicmania_nombre_jugador";
     if (nombre && typeof nombre === "string") {
         limpio = nombre.replace(/\s+/g, " ").trim();
     }

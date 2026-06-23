@@ -1,8 +1,8 @@
 "use strict";
 
 InicioCategorias.irAPaginaCategoria = function (dato, boton) {
-    var destino = dato.paginaJuego;
-    var resultadoNombre;
+    const destino = dato.paginaJuego;
+    let resultadoNombre;
     if (typeof InicioJugador !== "undefined") {
         resultadoNombre = InicioJugador.guardarNombreActual();
         if (!resultadoNombre.ok) {

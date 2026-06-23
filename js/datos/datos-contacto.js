@@ -1,6 +1,6 @@
 "use strict";
 
-var datosContacto = {
+const datosContacto = {
     correoDestino: "sebalardelli@gmail.com",
     asuntoPredeterminado: "Consulta desde MusicMania"
 };

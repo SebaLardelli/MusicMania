@@ -1,6 +1,6 @@
 "use strict";
 
-var InicioMediaEstado = {
+const InicioMediaEstado = {
     videoFondo: null,
     audioFondo: null,
     mediaLista: [],

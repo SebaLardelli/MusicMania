@@ -1,6 +1,6 @@
 "use strict";
 
-var datosCategorias = [
+const datosCategorias = [
     {
         id: "electronica",
         nombreVisible: "Electronica",

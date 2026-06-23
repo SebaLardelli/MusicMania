@@ -1,3 +1,3 @@
 "use strict";
 
-var AlmacenamientoVolumen = {};
+const AlmacenamientoVolumen = {};

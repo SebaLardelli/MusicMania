@@ -1,8 +1,8 @@
 "use strict";
 
 AlmacenamientoVolumen.guardarVolumen = function (valor) {
-    var limpio = AlmacenamientoVolumen.normalizar(valor);
-    var claveVolumen = "musicmania_volumen";
+    const limpio = AlmacenamientoVolumen.normalizar(valor);
+    const claveVolumen = "musicmania_volumen";
     try {
         localStorage.setItem(claveVolumen, String(limpio));
     } catch (errorStorage) {

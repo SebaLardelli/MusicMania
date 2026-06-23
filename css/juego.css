@@ -62,7 +62,10 @@
     --tinte-2: rgba(255, 107, 107, 0.22);
 }
 
-#audio-nivel {
+#audio-nivel,
+#audio-timer-tick,
+#audio-timer-tick-urgente,
+#audio-timer-agotado {
     display: none;
 }
 
@@ -325,17 +328,32 @@ body.pagina-juego {
     color: #ffe66d;
 }
 
-.campo-texto {
-    font-size: 0.5rem;
-    padding: 0.7rem;
-    color: var(--color-texto);
-    background: rgba(55, 28, 100, 0.85);
-    border: 3px solid var(--color-acento);
+.opciones-respuesta {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+    width: 100%;
 }
 
-.campo-texto:focus {
-    outline: 3px solid #ffe66d;
-    outline-offset: 2px;
+.boton-opcion-respuesta {
+    font-size: clamp(0.38rem, 1.8vw, 0.46rem);
+    line-height: 1.7;
+    padding: 0.75rem 0.85rem;
+    text-align: left;
+    color: var(--color-texto);
+    background: rgba(55, 28, 100, 0.85);
+    border: 3px solid var(--color-panel-borde);
+    box-shadow: 4px 4px 0 var(--color-borde);
+    transition: transform 0.12s ease, background 0.12s ease, border-color 0.12s ease;
+}
+
+.boton-opcion-respuesta:hover,
+.boton-opcion-respuesta:focus-visible {
+    background: rgba(70, 35, 120, 0.95);
+    border-color: #ffe66d;
+    transform: translate(2px, 2px);
+    box-shadow: 2px 2px 0 var(--color-borde);
 }
 
 .boton-juego {

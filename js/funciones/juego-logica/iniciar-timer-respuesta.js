@@ -6,8 +6,8 @@ JuegoLogica.iniciarTimerRespuesta = function () {
     if (typeof JuegoUi !== "undefined" && JuegoUi.actualizarTimerRespuesta) {
         JuegoUi.actualizarTimerRespuesta(JuegoEstado.segundosRestantesRespuesta);
     }
-    if (typeof JuegoSonidos !== "undefined" && JuegoSonidos.reproducirTick) {
-        JuegoSonidos.reproducirTick(JuegoEstado.segundosRestantesRespuesta);
+    if (typeof JuegoSonidosTimer !== "undefined" && JuegoSonidosTimer.reproducirTick) {
+        JuegoSonidosTimer.reproducirTick(JuegoEstado.segundosRestantesRespuesta);
     }
     JuegoEstado.intervaloTimerRespuesta = setInterval(function () {
         JuegoEstado.segundosRestantesRespuesta = JuegoEstado.segundosRestantesRespuesta - 1;
@@ -15,14 +15,14 @@ JuegoLogica.iniciarTimerRespuesta = function () {
             JuegoUi.actualizarTimerRespuesta(JuegoEstado.segundosRestantesRespuesta);
         }
         if (JuegoEstado.segundosRestantesRespuesta > 0) {
-            if (typeof JuegoSonidos !== "undefined" && JuegoSonidos.reproducirTick) {
-                JuegoSonidos.reproducirTick(JuegoEstado.segundosRestantesRespuesta);
+            if (typeof JuegoSonidosTimer !== "undefined" && JuegoSonidosTimer.reproducirTick) {
+                JuegoSonidosTimer.reproducirTick(JuegoEstado.segundosRestantesRespuesta);
             }
         }
         if (JuegoEstado.segundosRestantesRespuesta <= 0) {
             JuegoLogica.detenerTimerRespuesta();
-            if (typeof JuegoSonidos !== "undefined" && JuegoSonidos.reproducirTiempoAgotado) {
-                JuegoSonidos.reproducirTiempoAgotado();
+            if (typeof JuegoSonidosTimer !== "undefined" && JuegoSonidosTimer.reproducirTiempoAgotado) {
+                JuegoSonidosTimer.reproducirTiempoAgotado();
             }
             JuegoLogica.agotarTiempoRespuesta();
         }

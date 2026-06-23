@@ -1,11 +1,11 @@
 "use strict";
 
 AlmacenamientoRecords.actualizarRecordSiMejora = function (idCategoria, nombreJugador, puntaje, tiempoTotal, nivelMaximo) {
-    var records = AlmacenamientoRecords.obtenerRecordsCompletos();
-    var actual = records[idCategoria];
-    var nuevoRecord;
-    var resultado;
-    var nivelAnterior;
+    const records = AlmacenamientoRecords.obtenerRecordsCompletos();
+    const actual = records[idCategoria];
+    let nuevoRecord;
+    let resultado;
+    let nivelAnterior;
 
     resultado = {
         mejoro: false,

@@ -1,9 +1,9 @@
 "use strict";
 
 InstruccionesUi.init = function (config) {
-    var boton;
-    var modal;
-    var botonCerrar;
+    let boton;
+    let modal;
+    let botonCerrar;
     if (!config) {
         return;
     }

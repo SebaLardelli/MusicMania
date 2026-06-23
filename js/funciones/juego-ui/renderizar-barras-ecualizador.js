@@ -1,9 +1,9 @@
 "use strict";
 
 JuegoUi.renderizarBarrasEcualizador = function () {
-    var contenedor = document.querySelector(".visual-ecualizador");
-    var indice = 0;
-    var barra = null;
+    const contenedor = document.querySelector(".visual-ecualizador");
+    let indice = 0;
+    let barra = null;
 
     if (!contenedor || contenedor.children.length > 0) {
         return;

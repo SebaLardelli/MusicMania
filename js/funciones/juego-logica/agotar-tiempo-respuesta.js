@@ -1,8 +1,8 @@
 "use strict";
 
 JuegoLogica.agotarTiempoRespuesta = function () {
-    var nivel;
-    var resultadoRecord;
+    let nivel;
+    let resultadoRecord;
 
     if (JuegoEstado.estadoPartida !== "respondiendo") {
         return;

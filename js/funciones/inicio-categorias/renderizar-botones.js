@@ -1,8 +1,8 @@
 "use strict";
 
 InicioCategorias.renderizarBotones = function () {
-    var indice;
-    var boton;
+    let indice;
+    let boton;
     if (!InicioCategoriasEstado.contenedorLista || !datosCategorias) {
         return;
     }

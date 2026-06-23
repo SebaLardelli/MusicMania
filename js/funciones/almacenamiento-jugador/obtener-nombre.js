@@ -1,8 +1,8 @@
 "use strict";
 
 AlmacenamientoJugador.obtenerNombre = function () {
-    var datos;
-    var claveNombre = "musicmania_nombre_jugador";
+    let datos;
+    const claveNombre = "musicmania_nombre_jugador";
     if (!window.localStorage) {
         return "";
     }

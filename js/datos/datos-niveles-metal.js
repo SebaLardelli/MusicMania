@@ -1,17 +1,13 @@
 "use strict";
 
-var datosNivelesMetal = [
+const datosNivelesMetal = [
     {
         nivel: 1,
         carpeta: "Metallica - 1",
         banda: "Metallica",
         cancion: "Enter Sandman",
         rutaAudio: "assets/categorias/Metal/Metallica - 1/Enter Sandman (2019 Remaster) [8 Bit Tribute to Metallica] - 8 Bit Universe - 8 Bit Universe.mp3",
-        rutaImagen: "assets/categorias/Metal/Metallica - 1/sr2489ddb7224aws3 (1).png",
-        respuestasValidas: [
-            "Metallica",
-            "Enter Sandman"
-        ]
+        rutaImagen: "assets/categorias/Metal/Metallica - 1/sr2489ddb7224aws3 (1).png"
     },
     {
         nivel: 2,
@@ -19,12 +15,7 @@ var datosNivelesMetal = [
         banda: "Iron Maiden",
         cancion: "The Trooper",
         rutaAudio: "assets/categorias/Metal/Iron Maiden - 2/The Trooper (2022) [8 Bit Tribute to Iron Maiden] - 8 Bit Universe - 8 Bit Universe.mp3",
-        rutaImagen: "assets/categorias/Metal/Iron Maiden - 2/002eb743dcdb20d462da00ce71ea0c36.jpg",
-        respuestasValidas: [
-            "Iron Maiden",
-            "The Trooper",
-            "Trooper"
-        ]
+        rutaImagen: "assets/categorias/Metal/Iron Maiden - 2/002eb743dcdb20d462da00ce71ea0c36.jpg"
     },
     {
         nivel: 3,
@@ -32,11 +23,7 @@ var datosNivelesMetal = [
         banda: "Black Sabbath",
         cancion: "Iron Man",
         rutaAudio: "assets/categorias/Metal/Black Sabbath - 3/Iron Man [8 Bit Tribute to Black Sabbath] - 8 Bit Universe - 8 Bit Universe.mp3",
-        rutaImagen: "assets/categorias/Metal/Black Sabbath - 3/3eddba6ce59ecf0e78bdabaa7bf61936-removebg-preview.png",
-        respuestasValidas: [
-            "Black Sabbath",
-            "Iron Man"
-        ]
+        rutaImagen: "assets/categorias/Metal/Black Sabbath - 3/3eddba6ce59ecf0e78bdabaa7bf61936-removebg-preview.png"
     },
     {
         nivel: 4,
@@ -44,11 +31,7 @@ var datosNivelesMetal = [
         banda: "Judas Priest",
         cancion: "Breaking The Law",
         rutaAudio: "assets/categorias/Metal/Judas Priest - 4/Breaking The Law [8 Bit Tribute to Judas Priest] - 8 Bit Universe - 8 Bit Universe.mp3",
-        rutaImagen: "assets/categorias/Metal/Judas Priest - 4/id=15436.png",
-        respuestasValidas: [
-            "Judas Priest",
-            "Breaking The Law"
-        ]
+        rutaImagen: "assets/categorias/Metal/Judas Priest - 4/id=15436.png"
     },
     {
         nivel: 5,
@@ -56,12 +39,7 @@ var datosNivelesMetal = [
         banda: "Korn",
         cancion: "Freak on a Leash",
         rutaAudio: "assets/categorias/Metal/Korn - 5/Freak on a Leash [8 Bit Tribute to Korn] - 8 Bit Universe - 8 Bit Universe.mp3",
-        rutaImagen: "assets/categorias/Metal/Korn - 5/korn-logo.png",
-        respuestasValidas: [
-            "Korn",
-            "Freak on a Leash",
-            "Freak On A Leash"
-        ]
+        rutaImagen: "assets/categorias/Metal/Korn - 5/korn-logo.png"
     },
     {
         nivel: 6,
@@ -69,11 +47,7 @@ var datosNivelesMetal = [
         banda: "Megadeth",
         cancion: "Peace Sells",
         rutaAudio: "assets/categorias/Metal/Megadeth - 6/Peace Sells [8 Bit Tribute to Megadeth] - 8 Bit Universe - 8 Bit Universe.mp3",
-        rutaImagen: "assets/categorias/Metal/Megadeth - 6/megadeth-logo.png",
-        respuestasValidas: [
-            "Megadeth",
-            "Peace Sells"
-        ]
+        rutaImagen: "assets/categorias/Metal/Megadeth - 6/megadeth-logo.png"
     },
     {
         nivel: 7,
@@ -81,10 +55,6 @@ var datosNivelesMetal = [
         banda: "Slipknot",
         cancion: "Psychosocial",
         rutaAudio: "assets/categorias/Metal/Slipknot - 7/Psychosocial [8 Bit Cover Tribute to Slipknot] - 8 Bit Universe - 8 Bit Universe.mp3",
-        rutaImagen: "assets/categorias/Metal/Slipknot - 7/ChatGPT Image 17 may 2026, 21_44_16.png",
-        respuestasValidas: [
-            "Slipknot",
-            "Psychosocial"
-        ]
+        rutaImagen: "assets/categorias/Metal/Slipknot - 7/ChatGPT Image 17 may 2026, 21_44_16.png"
     }
 ];

@@ -1,17 +1,17 @@
 "use strict";
 
 JuegoLogica.confirmarRespuesta = function (textoRespuesta) {
-    var nivel = JuegoLogica.obtenerNivelActual();
-    var puntosNivel;
-    var esCorrecta;
-    var resultadoRecord;
+    const nivel = JuegoLogica.obtenerNivelActual();
+    let puntosNivel;
+    let esCorrecta;
+    let resultadoRecord;
 
     if (JuegoEstado.estadoPartida !== "respondiendo" || !nivel) {
         return;
     }
 
     JuegoLogica.detenerTimerRespuesta();
-    esCorrecta = UtilidadesTexto.respuestaEsCorrecta(textoRespuesta, nivel.respuestasValidas);
+    esCorrecta = UtilidadesTexto.normalizarTexto(textoRespuesta) === UtilidadesTexto.normalizarTexto(nivel.cancion);
 
     if (!esCorrecta) {
         JuegoEstado.estadoPartida = "derrota";

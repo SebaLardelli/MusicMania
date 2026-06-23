@@ -1,7 +1,7 @@
 "use strict";
 
 JuegoUi.mostrarImagenModalPorRuta = function (ruta, textoAlt, esFinDelJuego) {
-    var rutaCodificada = "";
+    let rutaCodificada = "";
     if (!ruta || !JuegoUiEstado.modalImagenContenedor || !JuegoUiEstado.modalImagenNivel) {
         return;
     }

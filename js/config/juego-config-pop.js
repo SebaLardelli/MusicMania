@@ -1,6 +1,6 @@
 "use strict";
 
-var configuracionJuego = {
+const configuracionJuego = {
     idCategoria: "pop",
     nombreVisible: "Pop",
     clasePagina: "pagina-juego--pop",

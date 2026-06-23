@@ -1,9 +1,9 @@
 "use strict";
 
 AlmacenamientoRecords.obtenerRecordsCompletos = function () {
-    var datos;
-    var parseados;
-    var claveRecords = "musicmania_records";
+    let datos;
+    let parseados;
+    const claveRecords = "musicmania_records";
     if (!window.localStorage) {
         return {};
     }

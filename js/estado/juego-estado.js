@@ -1,6 +1,6 @@
 "use strict";
 
-var JuegoEstado = {
+const JuegoEstado = {
     configuracion: null,
     niveles: [],
     idCategoria: "",

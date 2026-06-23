@@ -1,7 +1,7 @@
 "use strict";
 
 InicioJugador.validarNombreActual = function () {
-    var nombre = "";
+    let nombre = "";
     if (InicioJugadorEstado.inputNombre) {
         nombre = InicioJugadorEstado.inputNombre.value;
     }

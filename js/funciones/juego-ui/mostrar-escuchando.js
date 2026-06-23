@@ -7,7 +7,7 @@ JuegoUi.mostrarEscuchando = function (nivel) {
     JuegoUi.actualizarHud();
     JuegoUi.actualizarTimer(0);
     JuegoUiEstado.textoAyuda.textContent = "Suena la cancion. Cuando la reconozcas, detenela y responde.";
-    if (JuegoUiEstado.inputRespuesta) {
-        JuegoUiEstado.inputRespuesta.value = "";
+    if (JuegoUiEstado.contenedorOpcionesRespuesta) {
+        JuegoUiEstado.contenedorOpcionesRespuesta.innerHTML = "";
     }
 };

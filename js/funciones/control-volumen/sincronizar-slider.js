@@ -1,7 +1,7 @@
 "use strict";
 
 ControlVolumen.sincronizarSlider = function () {
-    var porcentaje;
+    let porcentaje;
     if (!ControlVolumenEstado.sliderVolumen) {
         return;
     }

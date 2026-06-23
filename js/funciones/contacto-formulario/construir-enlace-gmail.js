@@ -1,10 +1,10 @@
 "use strict";
 
 ContactoFormulario.construirEnlaceGmail = function (nombre, mail, mensaje) {
-    var destino = "musicmania.contacto@ejemplo.com";
-    var asunto = "Consulta desde MusicMania";
-    var cuerpo = "";
-    var enlace = "";
+    let destino = "musicmania.contacto@ejemplo.com";
+    let asunto = "Consulta desde MusicMania";
+    let cuerpo = "";
+    let enlace = "";
 
     if (typeof datosContacto !== "undefined") {
         if (datosContacto.correoDestino) {

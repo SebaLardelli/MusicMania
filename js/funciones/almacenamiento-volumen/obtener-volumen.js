@@ -1,8 +1,8 @@
 "use strict";
 
 AlmacenamientoVolumen.obtenerVolumen = function () {
-    var datos;
-    var claveVolumen = "musicmania_volumen";
+    let datos;
+    const claveVolumen = "musicmania_volumen";
     if (!window.localStorage) {
         return AlmacenamientoVolumen.volumenPorDefecto;
     }

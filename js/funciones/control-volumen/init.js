@@ -1,7 +1,7 @@
 "use strict";
 
 ControlVolumen.init = function (config) {
-    var configLocal = config || {};
+    const configLocal = config || {};
     ControlVolumenEstado.audioObjetivo = document.getElementById(configLocal.idAudio);
     ControlVolumenEstado.sliderVolumen = document.getElementById(configLocal.idSlider);
     ControlVolumenEstado.textoVolumen = document.getElementById(configLocal.idTextoVolumen);
@@ -16,7 +16,7 @@ ControlVolumen.init = function (config) {
     ControlVolumen.actualizarBotonMute();
     if (ControlVolumenEstado.sliderVolumen) {
         ControlVolumenEstado.sliderVolumen.addEventListener("input", function () {
-            var valorSlider = parseInt(ControlVolumenEstado.sliderVolumen.value, 10);
+            let valorSlider = parseInt(ControlVolumenEstado.sliderVolumen.value, 10);
             if (isNaN(valorSlider)) {
                 valorSlider = 0;
             }

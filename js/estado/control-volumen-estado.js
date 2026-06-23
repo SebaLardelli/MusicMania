@@ -1,6 +1,6 @@
 "use strict";
 
-var ControlVolumenEstado = {
+const ControlVolumenEstado = {
     volumenActual: 0.7,
     audioObjetivo: null,
     sliderVolumen: null,

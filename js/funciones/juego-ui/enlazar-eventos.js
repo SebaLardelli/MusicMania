@@ -1,13 +1,8 @@
 "use strict";
 
 JuegoUi.enlazarEventos = function () {
-    var botonConfirmar = document.getElementById("boton-confirmar-respuesta");
-    var botonVolver = document.getElementById("boton-volver-inicio");
-    var botonDetener = document.getElementById("boton-detener-musica");
-
-    botonConfirmar.addEventListener("click", function () {
-        JuegoLogica.confirmarRespuesta(JuegoUiEstado.inputRespuesta.value);
-    });
+    const botonVolver = document.getElementById("boton-volver-inicio");
+    const botonDetener = document.getElementById("boton-detener-musica");
 
     if (botonDetener) {
         botonDetener.addEventListener("click", function () {
@@ -29,17 +24,11 @@ JuegoUi.enlazarEventos = function () {
     });
 
     document.addEventListener("keydown", function (evento) {
-        var estado = JuegoLogica.obtenerEstado();
+        const estado = JuegoLogica.obtenerEstado();
         if (estado.estadoPartida === "escuchando") {
             if (evento.key === "Enter" || evento.key === " ") {
                 evento.preventDefault();
                 JuegoLogica.pausarParaResponder();
-            }
-        }
-        if (evento.key === "Enter" && estado.estadoPartida === "respondiendo") {
-            if (document.activeElement === JuegoUiEstado.inputRespuesta) {
-                evento.preventDefault();
-                JuegoLogica.confirmarRespuesta(JuegoUiEstado.inputRespuesta.value);
             }
         }
     });

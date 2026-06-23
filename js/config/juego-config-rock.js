@@ -1,6 +1,6 @@
 "use strict";
 
-var configuracionJuego = {
+const configuracionJuego = {
     idCategoria: "rock",
     nombreVisible: "Rock",
     clasePagina: "pagina-juego--rock",

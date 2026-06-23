@@ -1,7 +1,7 @@
 "use strict";
 
 JuegoUi.mostrarNivelSuperado = function (puntosNivel, puntajeTotal, nivel, callbackSiguiente) {
-    var cuerpo;
+    let cuerpo;
     if (typeof configuracionJuego !== "undefined" && configuracionJuego.soloNombreObra) {
         cuerpo = "Correcto! Era " + nivel.banda + ". +" + puntosNivel + " puntos. Total: " + puntajeTotal + ".";
     } else {

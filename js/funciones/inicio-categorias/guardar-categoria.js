@@ -1,7 +1,7 @@
 "use strict";
 
 InicioCategorias.guardarCategoria = function (dato) {
-    var datosGuardar = {
+    const datosGuardar = {
         id: dato.id,
         nombreVisible: dato.nombreVisible,
         carpeta: dato.carpeta,

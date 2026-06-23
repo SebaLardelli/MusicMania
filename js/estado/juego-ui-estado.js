@@ -1,10 +1,10 @@
 "use strict";
 
-var JuegoUiEstado = {
+const JuegoUiEstado = {
     pantallaJuego: null,
     pantallaRespuesta: null,
     modalResultado: null,
-    inputRespuesta: null,
+    contenedorOpcionesRespuesta: null,
     textoNivel: null,
     textoTimer: null,
     textoPuntaje: null,

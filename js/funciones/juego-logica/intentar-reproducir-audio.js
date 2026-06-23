@@ -1,7 +1,7 @@
 "use strict";
 
 JuegoLogica.intentarReproducirAudio = function () {
-    var promesa;
+    let promesa;
     if (JuegoEstado.estadoPartida !== "escuchando" || !JuegoEstado.audioNivel) {
         return;
     }

@@ -1,8 +1,8 @@
 "use strict";
 
 InstruccionesUi.actualizarTextoDinamico = function (textoTiempoId, obtenerLimiteSegundos) {
-    var elemento;
-    var limite;
+    let elemento;
+    let limite;
     if (!textoTiempoId || !obtenerLimiteSegundos) {
         return;
     }

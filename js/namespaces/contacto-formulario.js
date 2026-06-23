@@ -1,3 +1,3 @@
 "use strict";
 
-var ContactoFormulario = {};
+const ContactoFormulario = {};

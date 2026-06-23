@@ -1,7 +1,7 @@
 "use strict";
 
 InicioCategorias.obtenerDatoPorId = function (idCategoria) {
-    var indice;
+    let indice;
     if (!datosCategorias) {
         return null;
     }

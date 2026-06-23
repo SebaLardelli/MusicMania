@@ -1,6 +1,6 @@
 "use strict";
 
-var InicioJugadorEstado = {
+const InicioJugadorEstado = {
     inputNombre: null,
     textoError: null
 };

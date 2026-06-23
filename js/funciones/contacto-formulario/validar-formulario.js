@@ -1,15 +1,15 @@
 "use strict";
 
 ContactoFormulario.validarFormulario = function () {
-    var nombre = "";
-    var mail = "";
-    var mensaje = "";
-    var errores = {
+    let nombre = "";
+    let mail = "";
+    let mensaje = "";
+    const errores = {
         nombre: "",
         mail: "",
         mensaje: ""
     };
-    var valido = true;
+    let valido = true;
 
     if (ContactoFormularioEstado.inputNombre) {
         nombre = ContactoFormularioEstado.inputNombre.value;

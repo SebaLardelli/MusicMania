@@ -1,7 +1,7 @@
 "use strict";
 
 InicioJugador.guardarNombreActual = function () {
-    var resultado = InicioJugador.validarNombreActual();
+    const resultado = InicioJugador.validarNombreActual();
     if (resultado.ok) {
         AlmacenamientoJugador.guardarNombre(resultado.nombre);
     }
