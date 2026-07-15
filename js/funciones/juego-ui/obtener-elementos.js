@@ -3,6 +3,8 @@
 JuegoUi.obtenerElementos = function () {
     JuegoUiEstado.pantallaJuego = document.getElementById("pantalla-juego");
     JuegoUiEstado.pantallaRespuesta = document.getElementById("pantalla-respuesta");
+    JuegoUiEstado.pantallaArranque = document.getElementById("pantalla-arranque");
+    JuegoUiEstado.botonArranque = document.getElementById("boton-arranque");
     JuegoUiEstado.modalResultado = document.getElementById("modal-resultado");
     JuegoUiEstado.contenedorOpcionesRespuesta = document.getElementById("contenedor-opciones-respuesta");
     JuegoUiEstado.textoNivel = document.getElementById("texto-nivel");

@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicMania - Pelis y Series</title>
-    <link rel="icon" type="image/png" href="assets/imagenes/icono.png">
+    <link rel="icon" type="image/png" href="assets/inicio/icono/icono.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/juego.css">
     <link rel="stylesheet" href="css/instrucciones.css">
     <link rel="stylesheet" href="css/volumen.css">
 </head>
 <body class="pagina-juego">
+    <section id="pantalla-arranque" class="pantalla-arranque">
+        <p class="texto-arranque">Presiona para iniciar la musica del nivel</p>
+        <button type="button" id="boton-arranque" class="boton-arranque">Jugar</button>
+    </section>
     <div class="fondo-juego" aria-hidden="true"></div>
     <div class="contenedor-juego">
         <header class="cabecera-juego">
@@ -43,10 +47,10 @@
             </div>
         </section>
         <section id="pantalla-respuesta" class="pantalla-juego-seccion oculta">
-            <p id="texto-ayuda-respuesta" class="texto-ayuda">Musica detenida. Elegi el tema correcto de la misma pelicula o serie.</p>
+            <p id="texto-ayuda-respuesta" class="texto-ayuda">Musica detenida. Elegi la pelicula o serie correcta.</p>
             <div class="formulario-juego">
-                <p class="etiqueta-campo">Elegi el tema correcto</p>
-                <div id="contenedor-opciones-respuesta" class="opciones-respuesta" role="listbox" aria-label="Opciones de tema"></div>
+                <p class="etiqueta-campo">Elegi la pelicula o serie</p>
+                <div id="contenedor-opciones-respuesta" class="opciones-respuesta" role="listbox" aria-label="Opciones de pelicula o serie"></div>
             </div>
         </section>
         <div class="controles-audio controles-audio--juego">
@@ -98,7 +102,7 @@
             <ul class="lista-instrucciones">
                 <li class="item-instruccion item-instruccion--destacado">
                     <span class="emoticon-instruccion" aria-hidden="true">🎬</span>
-                    <span class="texto-item-instruccion">Elegi el <strong>tema correcto</strong> entre opciones de la misma pelicula o serie.</span>
+                    <span class="texto-item-instruccion">Elegi la <strong>pelicula o serie</strong> correcta entre las opciones.</span>
                 </li>
                 <li class="item-instruccion">
                     <span class="emoticon-instruccion" aria-hidden="true">🎧</span>
@@ -209,6 +213,9 @@
     <script src="js/funciones/juego-ui/mostrar-escuchando.js"></script>
     <script src="js/funciones/juego-ui/mostrar-error-audio.js"></script>
     <script src="js/funciones/juego-ui/ocultar-error-audio.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-pantalla-arranque.js"></script>
+    <script src="js/funciones/juego-ui/ocultar-pantalla-arranque.js"></script>
+    <script src="js/funciones/juego-ui/iniciar-con-interaccion.js"></script>
     <script src="js/funciones/juego-ui/renderizar-opciones-respuesta.js"></script>
     <script src="js/funciones/juego-ui/mostrar-respuesta.js"></script>
     <script src="js/funciones/juego-ui/abrir-modal.js"></script>

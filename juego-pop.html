@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MusicMania - Pop</title>
-    <link rel="icon" type="image/png" href="assets/imagenes/icono.png">
+    <link rel="icon" type="image/png" href="assets/inicio/icono/icono.png">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/juego.css">
     <link rel="stylesheet" href="css/instrucciones.css">
     <link rel="stylesheet" href="css/volumen.css">
 </head>
 <body class="pagina-juego">
+    <section id="pantalla-arranque" class="pantalla-arranque">
+        <p class="texto-arranque">Presiona para iniciar la musica del nivel</p>
+        <button type="button" id="boton-arranque" class="boton-arranque">Jugar</button>
+    </section>
     <div class="fondo-juego" aria-hidden="true"></div>
     <div class="contenedor-juego">
         <header class="cabecera-juego">
@@ -209,6 +213,9 @@
     <script src="js/funciones/juego-ui/mostrar-escuchando.js"></script>
     <script src="js/funciones/juego-ui/mostrar-error-audio.js"></script>
     <script src="js/funciones/juego-ui/ocultar-error-audio.js"></script>
+    <script src="js/funciones/juego-ui/mostrar-pantalla-arranque.js"></script>
+    <script src="js/funciones/juego-ui/ocultar-pantalla-arranque.js"></script>
+    <script src="js/funciones/juego-ui/iniciar-con-interaccion.js"></script>
     <script src="js/funciones/juego-ui/renderizar-opciones-respuesta.js"></script>
     <script src="js/funciones/juego-ui/mostrar-respuesta.js"></script>
     <script src="js/funciones/juego-ui/abrir-modal.js"></script>

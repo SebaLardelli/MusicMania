@@ -206,111 +206,111 @@ const datosOpcionesPorBanda = {
         "Waste It on Me"
     ],
     "Super Mario Bros": [
-        "Tema de Super Mario Bros",
-        "Tema de Mario Kart",
-        "Tema de Super Mario World",
-        "Tema de Super Mario 64"
+        "Super Mario Bros",
+        "Sonic the Hedgehog",
+        "Donkey Kong",
+        "Kirby"
     ],
     "GTA San Andreas": [
-        "Tema de GTA San Andreas",
-        "Tema de GTA Vice City",
-        "Tema de GTA V",
-        "Tema de GTA III"
+        "GTA San Andreas",
+        "GTA Vice City",
+        "Red Dead Redemption",
+        "Saints Row"
     ],
     "Skyrim": [
-        "Tema de Skyrim",
-        "Tema de Oblivion",
-        "Tema de Morrowind",
-        "Tema de Dragonborn"
+        "Skyrim",
+        "The Witcher 3",
+        "Oblivion",
+        "Dark Souls"
     ],
     "Minecraft": [
-        "Sweden",
-        "Subwoofer Lullaby",
-        "Haggstrom",
-        "Mice on Venus"
+        "Minecraft",
+        "Roblox",
+        "Terraria",
+        "Fortnite"
     ],
     "Fortnite": [
-        "Tema de Fortnite",
-        "Emote Default Dance",
-        "The End Event",
-        "OG Lobby Music"
+        "Fortnite",
+        "PUBG",
+        "Apex Legends",
+        "Call of Duty"
     ],
     "Mortal Kombat": [
-        "Tema de Mortal Kombat",
-        "Techno Syndrome",
-        "Liu Kang Theme",
-        "Scorpion Theme"
+        "Mortal Kombat",
+        "Street Fighter",
+        "Tekken",
+        "Injustice"
     ],
     "Tetris": [
-        "Tema de Tetris",
-        "Korobeiniki",
-        "Tetris Type A",
-        "Tetris Type B"
+        "Tetris",
+        "Pac-Man",
+        "Snake",
+        "Candy Crush"
     ],
     "The Legend of Zelda": [
-        "Tema de Zelda",
-        "Song of Storms",
-        "Gerudo Valley",
-        "Lost Woods"
+        "The Legend of Zelda",
+        "Metroid",
+        "Final Fantasy",
+        "Pokemon"
     ],
     "Harry Potter": [
-        "Tema de Harry Potter",
-        "Hedwig's Theme",
-        "Leaving Hogwarts",
-        "Double Trouble"
+        "Harry Potter",
+        "El Senor de los Anillos",
+        "Narnia",
+        "Percy Jackson"
     ],
     "Jurassic Park": [
-        "Tema de Jurassic Park",
-        "Welcome to Jurassic Park",
-        "Journey to the Island",
-        "The Raptor Attack"
+        "Jurassic Park",
+        "King Kong",
+        "Godzilla",
+        "Jumanji"
     ],
     "Pokemon": [
-        "Tema de Pokemon",
-        "Pokemon Center",
-        "Gym Battle",
-        "Wild Pokemon Battle"
+        "Pokemon",
+        "Digimon",
+        "Yu-Gi-Oh",
+        "Sailor Moon"
     ],
     "Los Simpsons": [
-        "Tema de Los Simpsons",
-        "The Simpsons Main Title",
-        "Halloween Theme",
-        "End Credits"
+        "Los Simpsons",
+        "Family Guy",
+        "South Park",
+        "Futurama"
     ],
     "Ghostbusters": [
-        "Tema de Ghostbusters",
-        "Ghostbusters Song",
-        "On Our Own",
-        "Savage Streets"
+        "Ghostbusters",
+        "Men in Black",
+        "Scooby-Doo",
+        "Beetlejuice"
     ],
     "Stranger Things": [
-        "Tema de Stranger Things",
-        "Kids",
-        "The Upside Down",
-        "Eleven"
+        "Stranger Things",
+        "Dark",
+        "The Umbrella Academy",
+        "Wednesday"
     ],
     "Star Wars": [
-        "Marcha Imperial",
-        "Main Theme",
-        "Cantina Band",
-        "Duel of the Fates"
+        "Star Wars",
+        "Star Trek",
+        "Guardianes de la Galaxia",
+        "Dune"
     ],
     "Indiana Jones": [
-        "Tema de Indiana Jones",
-        "Raiders March",
-        "The Map Room",
-        "Marion's Theme"
+        "Indiana Jones",
+        "La Momia",
+        "Tomb Raider",
+        "National Treasure"
     ],
     "He-Man": [
-        "Masters of the Universe",
-        "He-Man Opening Theme",
-        "Skeletor Theme",
-        "Battle Cat"
+        "He-Man",
+        "Thundercats",
+        "Transformers",
+        "She-Ra"
     ],
     "Top Gun": [
-        "Danger Zone",
-        "Take My Breath Away",
-        "Mighty Wings",
-        "Top Gun Anthem"
+        "Top Gun",
+        "Rocky",
+        "Days of Thunder",
+        "Karate Kid"
     ]
 };

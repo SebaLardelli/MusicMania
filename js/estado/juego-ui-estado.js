@@ -3,6 +3,8 @@
 const JuegoUiEstado = {
     pantallaJuego: null,
     pantallaRespuesta: null,
+    pantallaArranque: null,
+    botonArranque: null,
     modalResultado: null,
     contenedorOpcionesRespuesta: null,
     textoNivel: null,
@@ -20,5 +22,6 @@ const JuegoUiEstado = {
     textoModalTitulo: null,
     textoModalCuerpo: null,
     botonModalAccion: null,
-    callbackModal: null
+    callbackModal: null,
+    requiereArranque: true
 };

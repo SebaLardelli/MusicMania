@@ -15,5 +15,8 @@ JuegoUi.init = function () {
             return JuegoLogica.obtenerLimiteSegundosRespuesta();
         }
     });
-    JuegoLogica.comenzarPartidaDesdeMenu();
+    if (JuegoUiEstado.botonArranque) {
+        JuegoUiEstado.botonArranque.addEventListener("click", JuegoUi.iniciarConInteraccion);
+    }
+    JuegoUi.mostrarPantallaArranque();
 };

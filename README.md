@@ -2,7 +2,7 @@
 
 Inspirado en streams como OLGA y similares. Juego web con estética 8-bit donde el jugador debe reconocer temas musicales y adivinar la respuesta correcta en el menor tiempo posible.
 
-**Repositorio:** [https://github.com/SebaLardelli/MusicMania](https://github.com/SebaLardelli/MusicMania)+
+**Repositorio:** [https://github.com/SebaLardelli/MusicMania](https://github.com/SebaLardelli/MusicMania)
 
 **Desarrollador:** Sebastián Lardelli
 
