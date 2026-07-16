@@ -6,47 +6,41 @@ const datosCategorias = [
         nombreVisible: "Electronica",
         carpeta: "Electronica",
         claseCalco: "boton-categoria--electronica",
-        paginaJuego: "juego-electronica.html",
-        disponible: true
+        paginaJuego: "juego-electronica.html"
     },
     {
         id: "juegos",
         nombreVisible: "Juegos",
         carpeta: "Juegos",
         claseCalco: "boton-categoria--juegos",
-        paginaJuego: "juego-juegos.html",
-        disponible: true
+        paginaJuego: "juego-juegos.html"
     },
     {
         id: "metal",
         nombreVisible: "Metal",
         carpeta: "Metal",
         claseCalco: "boton-categoria--metal",
-        paginaJuego: "juego-metal.html",
-        disponible: true
+        paginaJuego: "juego-metal.html"
     },
     {
         id: "pelis-series",
         nombreVisible: "Pelis y Series",
         carpeta: "Pelis-Series",
         claseCalco: "boton-categoria--pelis-series",
-        paginaJuego: "juego-pelis-series.html",
-        disponible: true
+        paginaJuego: "juego-pelis-series.html"
     },
     {
         id: "pop",
         nombreVisible: "Pop",
         carpeta: "Pop",
         claseCalco: "boton-categoria--pop",
-        paginaJuego: "juego-pop.html",
-        disponible: true
+        paginaJuego: "juego-pop.html"
     },
     {
         id: "rock",
         nombreVisible: "Rock",
         carpeta: "Rock",
         claseCalco: "boton-categoria--rock",
-        paginaJuego: "juego-rock.html",
-        disponible: true
+        paginaJuego: "juego-rock.html"
     }
 ];

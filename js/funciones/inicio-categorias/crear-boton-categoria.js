@@ -8,10 +8,6 @@ InicioCategorias.crearBotonCategoria = function (dato) {
     boton.setAttribute("data-categoria-carpeta", dato.carpeta);
     boton.setAttribute("data-pagina-juego", dato.paginaJuego);
     boton.textContent = dato.nombreVisible;
-    if (!dato.disponible) {
-        boton.classList.add("boton-categoria--proximamente");
-        boton.setAttribute("aria-label", dato.nombreVisible + ", proximamente");
-    }
     boton.addEventListener("click", function () {
         InicioCategorias.irAPaginaCategoria(dato, boton);
     });

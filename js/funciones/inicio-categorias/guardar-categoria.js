@@ -5,8 +5,7 @@ InicioCategorias.guardarCategoria = function (dato) {
         id: dato.id,
         nombreVisible: dato.nombreVisible,
         carpeta: dato.carpeta,
-        paginaJuego: dato.paginaJuego,
-        disponible: dato.disponible
+        paginaJuego: dato.paginaJuego
     };
     try {
         localStorage.setItem(InicioCategoriasEstado.claveStorage, JSON.stringify(datosGuardar));

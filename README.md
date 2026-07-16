@@ -82,7 +82,7 @@ La cantidad de niveles depende de las carpetas en `assets/categorias/`. Cada niv
 - HUD dinamico: jugador, nivel, tiempo, puntos, vidas.
 - Ecualizador animado en el panel de misterio (barras generadas con JS al iniciar).
 - Modales para acierto, fin del juego y victoria (calcomania al acertar; imagen `fin-del-juego.png` al perder).
-- Pitidos de cuenta regresiva con Web Audio API (`js/funciones/juego-sonidos/`), respetando el volumen configurado.
+- Pitidos de cuenta regresiva con archivos WAV (`js/funciones/juego-sonidos-timer/`), respetando el volumen configurado.
 - Reinicio de partida sin recargar la pagina.
 - Temas visuales por genero (colores en `juego.css`).
 - Instrucciones especificas por categoria.
@@ -237,7 +237,6 @@ MusicMania/
     inicio.css
     contacto.css
     juego.css
-    juego-proximamente.css
     instrucciones.css
     volumen.css
   js/
@@ -255,15 +254,12 @@ MusicMania/
       utilidades-texto/
       almacenamiento-*/
       control-volumen/
-      juego-sonidos/
+      juego-sonidos-timer/
       juego-logica/
       juego-ui/
       inicio-*/
       contacto-formulario/
       instrucciones-ui/
-    manifests/
-      inicio-scripts.js         # referencia de orden
-      juego-scripts.js
   assets/
     imagenes/
       icono.png

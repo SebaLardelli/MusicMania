@@ -229,21 +229,6 @@ body.pagina-inicio {
     color: #f8f4ff;
 }
 
-.boton-categoria--proximamente {
-    opacity: 0.82;
-}
-
-.boton-categoria--proximamente::after {
-    content: "Proximamente";
-    position: absolute;
-    bottom: 6px;
-    left: 0;
-    width: 100%;
-    font-size: 0.32rem;
-    letter-spacing: 0.05em;
-    opacity: 0.9;
-}
-
 .panel-records {
     display: flex;
     flex-direction: column;
